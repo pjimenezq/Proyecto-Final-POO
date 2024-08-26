@@ -28,11 +28,43 @@ Se investigó sobre lo que es una sistema de gestión de inventario y la forma e
 
 De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA LA DEFINICIÓN
 ### Empresa
-En segundo lugar, 
-se la empresa los productos que vende, sus atributos y
+En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, los productos que vende y los atributos, el código y el costo de cada producto.
+
+En este paso se creó una empresa que... AQUÍ VA LA DESCRIPCIÓN DE LA EMPRESA (LO QUE HACE, LO QUE VENDE)
+
 ### Productos
+En la siguiente tabla se muestra cada uno de los productos de la empresa, su código, sus atributos y su costo.
+
+||Producto|Código|Atributos|Costo|
+|---|-----------------|------|-------------------------|--------|
+|1|NOMBRE PRODUCTO|CODIGO|CARACTERISTICAS|PRECIO|
+|2|||||
+|3|||||
+|4|||||
+|5|||||
+|6|||||
+|7|||||
+|8|||||
+|9|||||
+|10|||||
+|11|||||
+|12|||||
+|13|||||
+|14|||||
+|15|||||
+|16|||||
+|17|||||
+|18|||||
+|19|||||
+|20|||||
+
 ### Diagramas de clase
+Habiendo entendio la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, se modelaron mediante diagramas de clase las clases, los objetos y sus relaciones.
+
+AQUI VAN LOS DIAGRAMAS Y SI ES NECESARIO SU EXPLICACIÓN
 ### Código
-## Diagramas de clase
-## Solución y explicación
+
+
+## Solución y la explicación
+
 ## Cómo instalar y usar el desarrollo
