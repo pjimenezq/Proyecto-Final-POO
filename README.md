@@ -29,11 +29,14 @@ Se investigó sobre lo que es una sistema de gestión de inventario y la forma e
 De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA LA DEFINICIÓN
 ### Empresa
 En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, y se pensó en sus características principales y en el tipo de productos que vende.
+
 En este paso se creó una empresa que... AQUÍ VA LA DESCRIPCIÓN DE LA EMPRESA (LO QUE HACE, LO QUE VENDE)
 
 ### Productos
 El tercer paso consistió en determinar cada uno de los productos que la empresa maneja y especificar sus atributos (código, costo, AQUI SE ESCRIBE LA LISTA DE LOS OTROS ATRIBUTOS)
+
 En la siguiente tabla se muestra el resultado de este paso.
+
 ||Producto|Código|OTROS ATRIBUTOS|Costo|
 |---|-----------------|------|-------------------------|--------|
 |1|NOMBRE PRODUCTO|CODIGO|CARACTERISTICAS|PRECIO|
@@ -62,10 +65,11 @@ Habiendo entendido la forma en la que funciona un sistema de gestión de inventa
 
 AQUI VAN LOS DIAGRAMAS Y SI ES NECESARIO SU EXPLICACIÓN
 ### Código
+Para finalizar, teniendo en cuenta los diagramas de clase creados anteriormente, se realizó el código en python que emula el sistema de gestión de inventario para una bodega de la empresa creada.
 
-
+AQUI VA EL CÓDIGO
 ## Solución y la explicación
-
+AQUI SE EXPLICA EL CÓDIGO
 ## Cómo instalar y usar el desarrollo
 ## Rquerimientos para crear un entorno virtual
 ## Conclusiones
