@@ -28,7 +28,7 @@ Se investigó sobre lo que es una sistema de gestión de inventario y la forma e
 
 De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA LA DEFINICIÓN
 ### Empresa
-En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, y se pensó en sus características principales y en el tipo de productos que vende.
+En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, se pensó en sus características principales y en el tipo de productos que vende.
 
 En este paso se creó una empresa que... AQUÍ VA LA DESCRIPCIÓN DE LA EMPRESA (LO QUE HACE, LO QUE VENDE)
 
