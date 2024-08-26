@@ -28,14 +28,13 @@ Se investigó sobre lo que es una sistema de gestión de inventario y la forma e
 
 De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA LA DEFINICIÓN
 ### Empresa
-En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, los productos que vende y los atributos, el código y el costo de cada producto.
-
+En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, y se pensó en sus características principales y en el tipo de productos que vende.
 En este paso se creó una empresa que... AQUÍ VA LA DESCRIPCIÓN DE LA EMPRESA (LO QUE HACE, LO QUE VENDE)
 
 ### Productos
-En la siguiente tabla se muestra cada uno de los productos de la empresa, su código, sus atributos y su costo.
-
-||Producto|Código|Atributos|Costo|
+El tercer paso consistió en determinar cada uno de los productos que la empresa maneja y especificar sus atributos (código, costo, AQUI SE ESCRIBE LA LISTA DE LOS OTROS ATRIBUTOS)
+En la siguiente tabla se muestra el resultado de este paso.
+||Producto|Código|OTROS ATRIBUTOS|Costo|
 |---|-----------------|------|-------------------------|--------|
 |1|NOMBRE PRODUCTO|CODIGO|CARACTERISTICAS|PRECIO|
 |2|||||
@@ -59,7 +58,7 @@ En la siguiente tabla se muestra cada uno de los productos de la empresa, su có
 |20|||||
 
 ### Diagramas de clase
-Habiendo entendio la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, se modelaron mediante diagramas de clase las clases, los objetos y sus relaciones.
+Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
 
 AQUI VAN LOS DIAGRAMAS Y SI ES NECESARIO SU EXPLICACIÓN
 ### Código
@@ -68,3 +67,5 @@ AQUI VAN LOS DIAGRAMAS Y SI ES NECESARIO SU EXPLICACIÓN
 ## Solución y la explicación
 
 ## Cómo instalar y usar el desarrollo
+## Rquerimientos para crear un entorno virtual
+## Conclusiones
