@@ -79,134 +79,76 @@ Habiendo entendido la forma en la que funciona un sistema de gestión de inventa
 ```mermaid
 
 classDiagram
-    Product <|-- Shirt
-    Product <|-- Pants
-    Product <|-- Dress
-    Product <|-- Jacket
-    Product <|-- Skirt
-    Product <|-- Shorts
-    Product <|-- Sweater
-    Product <|-- Blouse
-    Product <|-- TShirt 
-    Product <|-- Coat 
-    Product <|-- Jeans
-    Product <|-- Hoodie
-    Product <|-- Suit 
-    Product <|-- Tracksuit
-    Product <|-- Sportswear
-    Product <|-- Footwear
-    Product <|-- Underwear
-    Product <|-- Bag
-    Product <|-- Jewelry
-    Product <|-- Hat
+    Producto <|-- CamisaFormal
+    Producto <|-- Pantalon
+    Producto <|-- Vestido
+    Producto <|-- Chaqueta
+    Producto <|-- Falda
+    Producto <|-- Shorts
+    Producto <|-- Saco
+    Producto <|-- Blusa
+    Producto <|-- Camiseta
+    Producto <|-- Abrigo 
+    Producto <|-- Jean
+    Producto <|-- Hoodie
+    Producto <|-- TrajeFormal 
+    Producto <|-- SudaderaDeportiva
+    Producto <|-- TopDeportivo
+    Producto <|-- Zapatos
+    Producto <|-- RopaInterior
+    Producto <|-- Bolso
+    Producto <|-- Joyeria
+    Producto <|-- Sombrero
 
-    class Product{
-      -Reference --> int
-      -Name --> str
-      -Brand --> str
-      -Price --> float
-      -StockQuantity --> int
+    class Producto{
+      -Referencia --> str
+      -Nombre --> str
+      -Precio --> float
       -Color --> str
-      -Size --> str
+      -Talla --> str
       -Material --> str
-      +CalculateDiscount() float
-      +UpdateStock() int
-      +GetDetails() str
+      +actualizar_datos_producto(self, nuevo_codigo, nuevo_articulo, nuevo_costo)
+      +imprimir_datos_producto(self)
     }
-    class Shirt{
-      -SleeveLenght --> str
-      -Fit --> str
-      -CollarType --> str 
-      +GetShirtDetails() --> str 
+    class CamisaFormal{
     }
-    class Pants{
-      -WaistType --> str
-      -Style --> str
-      +GetPantsDetails() str 
+    class Pantalon{ 
     }
-    class Dress{
-      -DressLenght --> str
-      -Shape --> str
-      +GetDressDetails() str
+    class Vestido{
     }
-    class Jacket{
-      -JacketType --> str
-      +GetJAcketDetails() str 
+    class Chaqueta{ 
     }
-    class Skirt{
-      -SkirtLenght --> str
-      -WaistType --> str
-      +GetSkirtDetails() str
+    class Falda{
     }
     class Shorts{
-      -WaistType --> str
-      -Style --> str
-      +GetShortDetails() str
     }
-    class Sweater{
-      -SleeveLenght --> str
-      -NeckType --> str
-      +GetSweaterDetails() str
+    class Saco{
     }
-    class Blouse{
-      -NeckType --> str
-      -Fit --> str
-      +GetBlouseDetails() str
+    class Blusa{
     }
-    class TShirt{
-      -NeckType --> str
-      -Fit --> str
-      +GetTShirtDetails() str
+    class Camiseta{
     }
-    class Coat{
-      -CoatLenght --> str 
-      + GetCoatDetails() str 
+    class Abrigo{
     }
-    class Jeans{
-      -WaistType --> str
-      -Fit --> str
-      +GetJeansDetails() str
+    class Jean{
     }
     class Hoodie{
-      -HoodType --> str
-      -PocketType --> str
-      +GetHoodieDetails() str 
     }
-    class Suit{
-      -SuitType --> str
-      -Fit --> str
-      +GetSuitDetails() str 
+    class TrajeFormal{
     }
-    class Tracksuit{
-      -Fit --> str 
-      +GetTracksuitDetails() str
+    class SudaderaDeportiva{
     }
-    class Sportswear{
-      -ActivityType --> str
-      +GetSportswearDetails() str 
+    class TopDeportivo{
     }
-    class Footwear{
-      -Size --> int
-      -ShoeType --> str
-      + GetFootwearDetails() str 
+    class Zapatos{
     }
-    class Underwear{
-      -UnderwearType --> str
-      -WaistbandType --> str
-      +GetUnderwearDetails() str 
+    class RopaInterior{
     }
-    class Bag{
-      -BagType --> str
-      +GetBagDetails() str 
+    class Bolso{
     }
-    class Jewelry{
-      -JewelryType --> str
-      -GemstoneType --> str 
-      +GetJewelryDetails() str 
+    class Joyeria{
     }
-    class Hat{
-      -HatType --> str 
-      +GetHatDetails() str
+    class Sombrero{
     }
 
 ```
