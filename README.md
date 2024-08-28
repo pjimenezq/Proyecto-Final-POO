@@ -77,6 +77,7 @@ En la siguiente tabla se muestra el resultado de este paso.
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
 
+**Relación entre productos**
 ```mermaid
 
 classDiagram
@@ -153,7 +154,40 @@ classDiagram
     }
 
 ```
+**Relación bodega-productos**
+```mermaid
+classDiagram
+    class Bodega
 
+    Bodega: + agregar_producto_a_bodega()
+    Bodega: + retirar_producto_de_bodega()
+    Bodega: + imprimir_productos_bodega()
+    Bodega: + crear_archivo_productos_bodega()
+    Bodega: + imprimir_producto_especifico_bodega()
+    Bodega: + registrar_entrada_producto()
+    Bodega: + eliminar_registro_entrada()
+    Bodega: + imprimir_entradas_bodega()
+    Bodega: + crear_archivo_entradas_bodega()
+    Bodega: + registrar_salida_producto()
+    Bodega: + eliminar_registro_salida()
+    Bodega: + imprimir_salidas_bodega()
+    Bodega: + crear_archivo_salidas_bodega()
+    Bodega: + registrar_devolucion_producto()
+    Bodega: + eliminar_registro_devolucion()
+    Bodega: + imprimir_devolucion_bodega()
+    Bodega: + crear_archivo_devoluciones_bodega()
+    Bodega: + control()
+
+    Productos*--Bodega
+    Productos: + Referencia
+    Productos: + Nombre
+    Productos: + Precio
+    Productos: + Color
+    Productos: + Talla    
+    Productos: + Material
+    Productos: + actualizar_datos_producto()
+    Productos: + imprimir_datos_producto()
+```
 
 ### Código
 Para finalizar, teniendo en cuenta los diagramas de clase creados anteriormente, se realizó el código en python que emula el sistema de gestión de inventario para una bodega de la empresa creada.
