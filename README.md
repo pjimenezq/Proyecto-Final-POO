@@ -79,70 +79,138 @@ Habiendo entendido la forma en la que funciona un sistema de gestión de inventa
 ```mermaid
 
 classDiagram
-    class Productos
-    Productos:+ Nombre
-    Productos: + Precio
+    Product <|-- Shirt
+    Product <|-- Pants
+    Product <|-- Dress
+    Product <|-- Jacket
+    Product <|-- Skirt
+    Product <|-- Shorts
+    Product <|-- Sweater
+    Product <|-- Blouse
+    Product <|-- TShirt 
+    Product <|-- Coat 
+    Product <|-- Jeans
+    Product <|-- Hoodie
+    Product <|-- Suit 
+    Product <|-- Tracksuit
+    Product <|-- Sportswear
+    Product <|-- Footwear
+    Product <|-- Underwear
+    Product <|-- Bag
+    Product <|-- Jewelry
+    Product <|-- Hat
 
-    Productos<|--Pizza
-
-    class Pizza
-    Pizza: + Tamaño
-    Pizza: + Tipo de masa
-    Pizza: + Ingredientes
-
-    class Carnes
-    class Pepperoni
-    class Hawaiana
-
-    Pizza<|--Carnes
-    Carnes: + Sabor
-    Carnes: + Aroma
-    Pizza<|--Pepperoni
-    Pepperoni: + Sabor
-    Pepperoni: + Aroma
-    Pizza<|--Hawaiana
-    Hawaiana: + Sabor
-    Hawaiana: + Aroma
-    Productos<|--Helado
-
-    class Helado
-    Helado: + Tamaño
-    Helado: + Toppings
-
-    class Mora
-    class Avellana
-    class Arequipe
-    Helado<|--Mora
-    Helado<|--Avellana
-    Helado<|--Arequipe
-    Mora: + Sabor
-    Mora: + Vegano
-    Productos<|--Bebida
-    Avellana: + Sabor
-    Avellana: + Presencia de nueces
-    Arequipe: + Sabor
-    Arequipe: + Azúcar añadido
-    class Bebida
-    Bebida: + Temperatura
-
-    class Agua
-    Agua: + Sabor
-    Agua: + Tamaño
-    class Cerveza
-    Cerveza: + Sabor
-    Cerveza: + Alcohol
-    class Jugo
-    Jugo: + Sabor
-    Jugo: + Adición de azúcar
-
-    Bebida<|--Agua
-    Bebida<|--Cerveza
-    Bebida<|--Jugo
+    class Product{
+      -Reference --> int
+      -Name --> str
+      -Brand --> str
+      -Price --> float
+      -StockQuantity --> int
+      -Color --> str
+      -Size --> str
+      -Material --> str
+      +CalculateDiscount() float
+      +UpdateStock() int
+      +GetDetails() str
+    }
+    class Shirt{
+      -SleeveLenght --> str
+      -Fit --> str
+      -CollarType --> str 
+      +GetShirtDetails() --> str 
+    }
+    class Pants{
+      -WaistType --> str
+      -Style --> str
+      +GetPantsDetails() str 
+    }
+    class Dress{
+      -DressLenght --> str
+      -Shape --> str
+      +GetDressDetails() str
+    }
+    class Jacket{
+      -JacketType --> str
+      +GetJAcketDetails() str 
+    }
+    class Skirt{
+      -SkirtLenght --> str
+      -WaistType --> str
+      +GetSkirtDetails() str
+    }
+    class Shorts{
+      -WaistType --> str
+      -Style --> str
+      +GetShortDetails() str
+    }
+    class Sweater{
+      -SleeveLenght --> str
+      -NeckType --> str
+      +GetSweaterDetails() str
+    }
+    class Blouse{
+      -NeckType --> str
+      -Fit --> str
+      +GetBlouseDetails() str
+    }
+    class TShirt{
+      -NeckType --> str
+      -Fit --> str
+      +GetTShirtDetails() str
+    }
+    class Coat{
+      -CoatLenght --> str 
+      + GetCoatDetails() str 
+    }
+    class Jeans{
+      -WaistType --> str
+      -Fit --> str
+      +GetJeansDetails() str
+    }
+    class Hoodie{
+      -HoodType --> str
+      -PocketType --> str
+      +GetHoodieDetails() str 
+    }
+    class Suit{
+      -SuitType --> str
+      -Fit --> str
+      +GetSuitDetails() str 
+    }
+    class Tracksuit{
+      -Fit --> str 
+      +GetTracksuitDetails() str
+    }
+    class Sportswear{
+      -ActivityType --> str
+      +GetSportswearDetails() str 
+    }
+    class Footwear{
+      -Size --> int
+      -ShoeType --> str
+      + GetFootwearDetails() str 
+    }
+    class Underwear{
+      -UnderwearType --> str
+      -WaistbandType --> str
+      +GetUnderwearDetails() str 
+    }
+    class Bag{
+      -BagType --> str
+      +GetBagDetails() str 
+    }
+    class Jewelry{
+      -JewelryType --> str
+      -GemstoneType --> str 
+      +GetJewelryDetails() str 
+    }
+    class Hat{
+      -HatType --> str 
+      +GetHatDetails() str
+    }
 
 ```
-[![](https://mermaid.ink/img/pako:eNqlVtuO2jAQ_ZUoT61YfgBVlRbQLkLtijas-sLLNBnAwomR4-yKpvvv9QVyIeM1q_LEzInPmbFnPK7jVGQYT-KUQ1nOGewk5Jsi0r-VFFmVqujL3_E4SvZMKsK_gkKVhH8usaT8S0gPSBElB1og2QtJKiSvCAolgUy5qEokgLXNIiKQmQDSv0QoKPGFEBmjJJKKkURrqRMvNUitOZoUdTpUMg9CKA_0XGQoPdgUdmQ6r8jliUoIdGTObyvhgtbOF0Xjn7hFiUWK0Xj8NWKFapAnyJ2zVLJxTiUU2cC7kuxMsOUCWopEifTwo9LFxNRpIDATXMgBV8L-DGW_m5pgwK-B0Qx4WnGNzlmZiqpQnz73Yxg9HzMN20g01tEfPaKaowLGSw00pG_d7bKV1W5WwhFf8BsWu70axPjAhj6dIge5Ph2blKKuvKVvY-h_0gvENmQbyC9gperSdrb8xAdeo2UZevlSOrbBWx1revJN9nAkleyi0M66G6NVcjaVkqFc3hs0GL29bTrHZUxP9N4dtOdy6J2LrzZMf__XmViKoI67EW-swidMD960HFNI0F20dZCSqngj49aHVNZXvfVRlfVV89AqZgLUnXaEq3po2zHSnAYPFpkdHrccuydwuz4Ut5tErYqxSZGVeK9vHE24b_QE69SXtj6SkPk-KNFMypqi692KzafBzmgmbEt6nyr2oqeNtweaNcGQLzO6Hs6m7hjTTYykmqmoC0dQrJn6rVrjIg_D1t1vPY19mTbLg9r6VdGqasPHqKEbusO-RToXu3OQOTxiXipRoHdAnhcHVRfdLteGl3ABZFXFd3GOMgeW6TezZdrEao85buKJ_pvhFiquNvGmMJ9CpURyKtJ4omSFd3FlnxjnV7Zzvv0DH0d9QQ?type=png)](https://mermaid.live/edit#pako:eNqlVtuO2jAQ_ZUoT61YfgBVlRbQLkLtijas-sLLNBnAwomR4-yKpvvv9QVyIeM1q_LEzInPmbFnPK7jVGQYT-KUQ1nOGewk5Jsi0r-VFFmVqujL3_E4SvZMKsK_gkKVhH8usaT8S0gPSBElB1og2QtJKiSvCAolgUy5qEokgLXNIiKQmQDSv0QoKPGFEBmjJJKKkURrqRMvNUitOZoUdTpUMg9CKA_0XGQoPdgUdmQ6r8jliUoIdGTObyvhgtbOF0Xjn7hFiUWK0Xj8NWKFapAnyJ2zVLJxTiUU2cC7kuxMsOUCWopEifTwo9LFxNRpIDATXMgBV8L-DGW_m5pgwK-B0Qx4WnGNzlmZiqpQnz73Yxg9HzMN20g01tEfPaKaowLGSw00pG_d7bKV1W5WwhFf8BsWu70axPjAhj6dIge5Ph2blKKuvKVvY-h_0gvENmQbyC9gperSdrb8xAdeo2UZevlSOrbBWx1revJN9nAkleyi0M66G6NVcjaVkqFc3hs0GL29bTrHZUxP9N4dtOdy6J2LrzZMf__XmViKoI67EW-swidMD960HFNI0F20dZCSqngj49aHVNZXvfVRlfVV89AqZgLUnXaEq3po2zHSnAYPFpkdHrccuydwuz4Ut5tErYqxSZGVeK9vHE24b_QE69SXtj6SkPk-KNFMypqi692KzafBzmgmbEt6nyr2oqeNtweaNcGQLzO6Hs6m7hjTTYykmqmoC0dQrJn6rVrjIg_D1t1vPY19mTbLg9r6VdGqasPHqKEbusO-RToXu3OQOTxiXipRoHdAnhcHVRfdLteGl3ABZFXFd3GOMgeW6TezZdrEao85buKJ_pvhFiquNvGmMJ9CpURyKtJ4omSFd3FlnxjnV7Zzvv0DH0d9QQ)
 
-Para una mejor visualización: https://www.mermaidchart.com/raw/f10fee59-590a-438b-94d8-877d5570daf4?theme=light&version=v0.1&format=svg
 
 ### Código
 Para finalizar, teniendo en cuenta los diagramas de clase creados anteriormente, se realizó el código en python que emula el sistema de gestión de inventario para una bodega de la empresa creada.
