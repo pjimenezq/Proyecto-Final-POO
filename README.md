@@ -83,11 +83,10 @@ Para una mejor visualización: https://www.mermaidchart.com/raw/f10fee59-590a-43
 ### Código
 Para finalizar, teniendo en cuenta los diagramas de clase creados anteriormente, se realizó el código en python que emula el sistema de gestión de inventario para una bodega de la empresa creada.
 
-AQUI VA EL CÓDIGO
+
 ## Solución y la explicación
-AQUI SE EXPLICA EL CÓDIGO
 ## Cómo instalar y usar el desarrollo
-## Rquerimientos para crear un entorno virtual
+## Requerimientos para crear un entorno virtual
 ## Conclusiones
 ## Bibliografía
 Baca Urbina, G., Cruz Valderrama, M., Cristóbal Vázquez, M. A., Baca Cruz, G., Gutiérrez Matus, J. C., Pacheco Espejel, A. A., Rivera González, Á. E., Rivera González, I. A., & Obregón Sánchez, M. G. (2014)Introducción a la Ingeniería Industrial (2ª ed.)1. Grupo Editorial Patria. ISBN 978-607-438-919-72.
