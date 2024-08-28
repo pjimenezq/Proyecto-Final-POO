@@ -1,6 +1,6 @@
 import json
 class Producto():
-    def __init__(self, codigo:str, articulo:str):
+    def __init__(self, codigo:str, articulo:str, costo:float):
         self.codigo=codigo
         self.articulo=articulo
         self.costo=costo
