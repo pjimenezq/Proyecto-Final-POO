@@ -1,17 +1,23 @@
 import json
 class Producto():
-    def __init__(self, codigo:str, articulo:str, costo:float):
+    def __init__(self, codigo:str, articulo:str, costo:float, color:str, talla:str, material:str):
         self.codigo=codigo
         self.articulo=articulo
         self.costo=costo
+        self.color=color
+        self.talla=talla
+        self.material=material
 
-    def actualizar_datos_producto(self, nuevo_codigo:str, nuevo_articulo:str, nuevo_costo:float):
+    def actualizar_datos_producto(self, nuevo_codigo:str, nuevo_articulo:str, nuevo_costo:float, nuevo_color:str, nueva_talla:str, nuevo_material:str):
         self.codigo=nuevo_codigo
         self.articulo=nuevo_articulo
         self.costo=nuevo_costo
+        self.color=nuevo_color
+        self.talla=nueva_talla
+        self.material=nuevo_material
     
     def imprimir_datos_producto(self):
-        producto = {"CODIGO":self.codigo, "ARTICULO":self.articulo, "COSTO":self.costo }
+        producto = {"CODIGO":self.codigo, "ARTICULO":self.articulo, "COSTO":self.costo, "COLOR": self.color, "TALLA":self.talla, "MATERIAL"=self.material}
         for k,v in producto.items():
             print(k,v)
 
