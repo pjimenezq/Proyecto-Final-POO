@@ -1,4 +1,4 @@
-# Proyecto final POO
+# NOTCLOTHES - Proyecto final POO
 **Nombre del grupo:**
 
 **Integrantes:**
