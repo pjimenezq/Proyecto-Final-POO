@@ -69,7 +69,7 @@ En la siguiente tabla se muestra el resultado de este paso.
 |15|Sportswear|20-15|$200 USD|Negro|XS-S-M-L-XL-XL|Cuero|
 |16|Footwear|20-16|$4200 USD|Negro|6-8|Poliéster|Cuero|
 |15|Sportswear|20-15|$200 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|17|Underwear|20-17|$100 USD|Negro||Poliéster|Algodon|
+|17|Underwear|20-17|$100 USD|Negro|Unica|Poliéster|Algodon|
 |18|Bag|20-18|$1000 USD|Negro|UNICA|Poliéster|Algodon|
 |19|Jewelry|20-19|$3200 USD|Negro|UNICA|Poliéster|Plata|
 |20|Hat|20-20|$1200 USD|Negro|UNICA|Poliéster|Cuero|
