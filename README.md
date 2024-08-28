@@ -1,5 +1,5 @@
 # NOTCLOTHES - Proyecto final POO
-**Nombre del grupo:**
+**Nombre del grupo:** );
 
 **Integrantes:**
 * Paula Jiménez Quiñones
@@ -13,7 +13,7 @@ Construir una aplicación que emule un sistema de gestión de inventario para un
 Condiciones:
 + Código original
 + Uso de herramientas vistas en el curso
-+ Interacción y manejo a trabés de la consola
++ Interacción y manejo a través de la consola
   
 Operaciones:
 + Crear objeto a almacenar (+20 objetos, con distintos atributos)
@@ -27,21 +27,19 @@ En primer lugar, se hizo una investigación sobre el problema planteado. Este pa
 Se investigó sobre lo que es una sistema de gestión de inventario y la forma en la que funciona. El entender este concepto del mundo real facilitó e hizo más eficiente el proceso de abstraer sus características principales, para luego representarlas gráficamente mediante clases, objetos y sus relaciones.
 
 
-De acuerdo con Gabriel Baca (2014) en su libro Introducción a la Ingenieria Industrial, **el inventario** consiste en la acumulación de diversos artículos, materiales o productos que tienen valor y utilidad para una empresa. Estos materiales pueden ser utilizados como insumos (materias primas) para la producción de otros productos; también pueden ser productos intermedios (que están en proceso de transformación y serán trasladados a la siguiente etapa del proceso productivo), o productos terminados (que han completado el proceso productivo y están listos para ser enviados al cliente).
+De acuerdo con Gabriel Baca (2014) en su libro _Introducción a la Ingenieria Industrial_, **el inventario** consiste en la acumulación de diversos artículos, materiales o productos que tienen valor y utilidad para una empresa. Estos materiales pueden ser utilizados como insumos (materias primas) para la producción de otros productos; también pueden ser productos intermedios (que están en proceso de transformación y serán trasladados a la siguiente etapa del proceso productivo), o productos terminados (que han completado el proceso productivo y están listos para ser enviados al cliente).
 
-Sobre este contexto se entiende el **Sistema de Gestión de Inventario** como la acumulación y administración de artículos, materiales o productos que representan valor y utilidad para una empresa. El proposito de administrar el inventario de una empresa surge como forma de combatir la incertidumbre en la demanda y el suministro, asegurando que la empresa tenga los materiales necesarios para la producción y pueda satisfacer las necesidades de los clientes.
+Sobre este contexto se entiende el **Sistema de Gestión de Inventario** como la acumulación y administración de artículos, materiales o productos que representan valor y utilidad para una empresa. El propósito de administrar el inventario de una empresa surge como forma de combatir la incertidumbre en la demanda y el suministro, asegurando que la empresa tenga los materiales necesarios para la producción y pueda satisfacer las necesidades de los clientes.
 
-Por otro lado, el hecho de establecer un sistema de gestión de inventario implica algunos aspectos fundamentales como, el uso de **revisiones continuas**, reducción de niveles de inventario de seguridad, y métodos cuantitativos para equilibrar costos y niveles de servicio, asimismo formular un **conjunto de políticas y controles** que determinan las cantidades adecuadas de inventario, el tamaño de los pedidos y la frecuencia de compra y finalmente es importante mencionar que el hecho de mantener inventarios implica **riesgos** como obsolescencia, deterioro y costos de almacenamiento, de aqui la importancia de incluir constos de mantenimiento, pedidos y penalización.
-
-Tomado y adaptado de 
+Por otro lado, el hecho de establecer un sistema de gestión de inventario implica algunos aspectos fundamentales como, el uso de **revisiones continuas**, reducción de niveles de inventario de seguridad, y métodos cuantitativos para equilibrar costos y niveles de servicio, asimismo formular un **conjunto de políticas y controles** que determinan las cantidades adecuadas de inventario, el tamaño de los pedidos y la frecuencia de compra y finalmente es importante mencionar que el hecho de mantener inventarios implica **riesgos** como obsolescencia, deterioro y costos de almacenamiento, de aqui la importancia de incluir costos de mantenimiento, pedidos y penalización.
 
 
 ### Empresa
 En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, se pensó en sus características principales y en el tipo de productos que vende.
 
-Es asi como creamos **NOTCLOTHES**
+Es así como creamos **NOTCLOTHES**.
 
-En NotClothes, nos dedicamos a redefinir la alta costura y moda a través de un enfoque sostenible y centrado en el bienestar de nuestros clientes. Nuestro objetivo es crear prendas de diseño exclusivo y alta calidad en sus materiales que no solo realcen la belleza y la elegancia, sino que también promuevan la comodidad, las distintas perspectivas de genero  y el respeto por el medio ambiente 
+En NotClothes, nos dedicamos a redefinir la alta costura y moda a través de un enfoque sostenible y centrado en el bienestar de nuestros clientes. Nuestro objetivo es crear prendas de diseño exclusivo y alta calidad en sus materiales que no solo realcen la belleza y la elegancia, sino que también promuevan la comodidad, las distintas perspectivas de género  y el respeto por el medio ambiente.
 
 **MÉTRICAS** 
 
@@ -52,28 +50,28 @@ El tercer paso consistió en determinar cada uno de los productos que la empresa
 
 En la siguiente tabla se muestra el resultado de este paso.
 
-||Producto|Ref.|Marca|Precio|Stock|Color|Talla|Material|Descripción|
-|---|-----------------|------|---------|---------|-------|--------|------|--------|--------|
-|1|Shirt|20-01|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|2|Pants|20-02|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|3|Dress|20-03|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|4|Jacket|20-04|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|5|Skirt|20-05|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|6|Shorts|20-06|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|7|Sweater|20-07|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|8|Blouse|20-08|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|9|T-Shirt|20-09|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|10|Coat|20-10|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|11|Jeans|20-11|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|12|Hoodie|20-12|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|13|Suit|20-13|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|14|Tracksuit|20-14|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|15|Sportswear|20-15|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|16|Footwear|20-16|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|17|Underwear|20-17|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|18|Bag|20-18|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|19|Jewelry|20-19|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
-|20|Hat|20-20|NOTCLOTHES|0|0|Negro|S-M-L|Poliéster||
+||Producto|Ref.|Marca|Precio|Color|Talla|Material|
+|---|-----------------|------|---------|---------|--------|------|--------|
+|1|Shirt|20-01|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|2|Pants|20-02|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|3|Dress|20-03|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|4|Jacket|20-04|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|5|Skirt|20-05|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|6|Shorts|20-06|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|7|Sweater|20-07|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|8|Blouse|20-08|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|9|T-Shirt|20-09|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|10|Coat|20-10|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|11|Jeans|20-11|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|12|Hoodie|20-12|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|13|Suit|20-13|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|14|Tracksuit|20-14|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|15|Sportswear|20-15|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|16|Footwear|20-16|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|17|Underwear|20-17|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|18|Bag|20-18|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|19|Jewelry|20-19|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|20|Hat|20-20|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
 
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
@@ -82,7 +80,6 @@ Habiendo entendido la forma en la que funciona un sistema de gestión de inventa
 
 Para una mejor visualización: https://www.mermaidchart.com/raw/f10fee59-590a-438b-94d8-877d5570daf4?theme=light&version=v0.1&format=svg
 
-AQUI VAN LOS DIAGRAMAS Y SI ES NECESARIO SU EXPLICACIÓN
 ### Código
 Para finalizar, teniendo en cuenta los diagramas de clase creados anteriormente, se realizó el código en python que emula el sistema de gestión de inventario para una bodega de la empresa creada.
 
