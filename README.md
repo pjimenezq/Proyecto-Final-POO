@@ -27,9 +27,13 @@ En primer lugar, se hizo una investigación sobre el problema planteado. Este pa
 Se investigó sobre lo que es una sistema de gestión de inventario y la forma en la que funciona. El entender este concepto del mundo real facilitó e hizo más eficiente el proceso de abstraer sus características principales, para luego representarlas gráficamente mediante clases, objetos y sus relaciones.
 
 
-De acuerdo con Gabriel Baca (2014) en su libro Introducción a la Ingenieria Industrial el inventario es entendido como la acumulación de artículos, materiales o productos que representan valor y utilidad para determinada empresa 
+De acuerdo con Gabriel Baca (2014) en su libro Introducción a la Ingenieria Industrial, **el inventario** consiste en la acumulación de diversos artículos, materiales o productos que tienen valor y utilidad para una empresa. Estos materiales pueden ser utilizados como insumos (materias primas) para la producción de otros productos; también pueden ser productos intermedios (que están en proceso de transformación y serán trasladados a la siguiente etapa del proceso productivo), o productos terminados (que han completado el proceso productivo y están listos para ser enviados al cliente).
 
-Sobre este contexto se entiende el Sistema de Gestión  de Inventario como la acumulación y administración de artículo, materiales o productos que representan valor y utilidad para una empresa. 
+Sobre este contexto se entiende el **Sistema de Gestión de Inventario** como la acumulación y administración de artículos, materiales o productos que representan valor y utilidad para una empresa. El proposito de administrar el inventario de una empresa surge como forma de combatir la incertidumbre en la demanda y el suministro, asegurando que la empresa tenga los materiales necesarios para la producción y pueda satisfacer las necesidades de los clientes.
+
+Por otro lado, el hecho de establecer un sistema de gestión de inventario implica algunos aspectos fundamentales como, el uso de **revisiones continuas**, reducción de niveles de inventario de seguridad, y métodos cuantitativos para equilibrar costos y niveles de servicio, asimismo formular un **conjunto de políticas y controles** que determinan las cantidades adecuadas de inventario, el tamaño de los pedidos y la frecuencia de compra y finalmente es importante mencionar que el hecho de mantener inventarios implica **riesgos** como obsolescencia, deterioro y costos de almacenamiento, de aqui la importancia de incluir constos de mantenimiento, pedidos y penalización.
+
+Tomado y adaptado de 
 
 
 ### Empresa
@@ -84,3 +88,5 @@ AQUI SE EXPLICA EL CÓDIGO
 ## Cómo instalar y usar el desarrollo
 ## Rquerimientos para crear un entorno virtual
 ## Conclusiones
+## Bibliografía
+Baca Urbina, G., Cruz Valderrama, M., Cristóbal Vázquez, M. A., Baca Cruz, G., Gutiérrez Matus, J. C., Pacheco Espejel, A. A., Rivera González, Á. E., Rivera González, I. A., & Obregón Sánchez, M. G. (2014)Introducción a la Ingeniería Industrial (2ª ed.)1. Grupo Editorial Patria. ISBN 978-607-438-919-72.
