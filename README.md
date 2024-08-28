@@ -30,7 +30,8 @@ De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA L
 ### Empresa
 En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, se pensó en sus características principales y en el tipo de productos que vende.
 
-Es asi como creamos NOTCLOTHES 
+Es asi como creamos **NOTCLOTHES**
+
 En NotClothes, nos dedicamos a redefinir la alta costura y moda a través de un enfoque sostenible y centrado en el bienestar de nuestros clientes. Nuestro objetivo es crear prendas de diseño exclusivo y alta calidad en sus materiales que no solo realcen la belleza y la elegancia, sino que también promuevan la comodidad, las distintas perspectivas de genero  y el respeto por el medio ambiente 
 
 ### Productos
