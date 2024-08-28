@@ -35,7 +35,7 @@ Es asi como creamos **NOTCLOTHES**
 En NotClothes, nos dedicamos a redefinir la alta costura y moda a través de un enfoque sostenible y centrado en el bienestar de nuestros clientes. Nuestro objetivo es crear prendas de diseño exclusivo y alta calidad en sus materiales que no solo realcen la belleza y la elegancia, sino que también promuevan la comodidad, las distintas perspectivas de genero  y el respeto por el medio ambiente 
 
 ### Productos
-El tercer paso consistió en determinar cada uno de los productos que la empresa maneja y especificar sus atributos (código, costo, AQUI SE ESCRIBE LA LISTA DE LOS OTROS ATRIBUTOS)
+El tercer paso consistió en determinar cada uno de los productos que la empresa maneja y especificar sus atributos (Referencia, nombre del producto, marca, precio, cantidad disponible e stock, color, talla, material, etc.)
 
 En la siguiente tabla se muestra el resultado de este paso.
 
