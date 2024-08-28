@@ -51,7 +51,7 @@ El tercer paso consistió en determinar cada uno de los productos que la empresa
 En la siguiente tabla se muestra el resultado de este paso.
 
 ||Producto|Ref.|Precio|Color|Talla|Material|
-|---|-----------------|------|---------|---------|--------|------|--------|
+|---|-----------------|------|---------|---------|--------|------|
 |1|Shirt|20-01|$200 USD|Negro|S-M-L|Poliéster|
 |2|Pants|20-02|$900 USD|Negro|S-M-L|Poliéster|
 |3|Dress|20-03|$1200 USD|Negro|S-M-L|Poliéster|
