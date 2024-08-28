@@ -30,7 +30,8 @@ De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA L
 ### Empresa
 En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, se pensó en sus características principales y en el tipo de productos que vende.
 
-En este paso se creó una empresa que... AQUÍ VA LA DESCRIPCIÓN DE LA EMPRESA (LO QUE HACE, LO QUE VENDE)
+Es asi como creamos NOTCLOTHES 
+En NotClothes, nos dedicamos a redefinir la alta costura y moda a través de un enfoque sostenible y centrado en el bienestar de nuestros clientes. Nuestro objetivo es crear prendas de diseño exclusivo y alta calidad en sus materiales que no solo realcen la belleza y la elegancia, sino que también promuevan la comodidad, las distintas perspectivas de genero  y el respeto por el medio ambiente 
 
 ### Productos
 El tercer paso consistió en determinar cada uno de los productos que la empresa maneja y especificar sus atributos (código, costo, AQUI SE ESCRIBE LA LISTA DE LOS OTROS ATRIBUTOS)
