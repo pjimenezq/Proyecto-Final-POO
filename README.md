@@ -76,6 +76,70 @@ En la siguiente tabla se muestra el resultado de este paso.
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
 
+```mermaid
+
+classDiagram
+    class Productos
+    Productos:+ Nombre
+    Productos: + Precio
+
+    Productos<|--Pizza
+
+    class Pizza
+    Pizza: + Tamaño
+    Pizza: + Tipo de masa
+    Pizza: + Ingredientes
+
+    class Carnes
+    class Pepperoni
+    class Hawaiana
+
+    Pizza<|--Carnes
+    Carnes: + Sabor
+    Carnes: + Aroma
+    Pizza<|--Pepperoni
+    Pepperoni: + Sabor
+    Pepperoni: + Aroma
+    Pizza<|--Hawaiana
+    Hawaiana: + Sabor
+    Hawaiana: + Aroma
+    Productos<|--Helado
+
+    class Helado
+    Helado: + Tamaño
+    Helado: + Toppings
+
+    class Mora
+    class Avellana
+    class Arequipe
+    Helado<|--Mora
+    Helado<|--Avellana
+    Helado<|--Arequipe
+    Mora: + Sabor
+    Mora: + Vegano
+    Productos<|--Bebida
+    Avellana: + Sabor
+    Avellana: + Presencia de nueces
+    Arequipe: + Sabor
+    Arequipe: + Azúcar añadido
+    class Bebida
+    Bebida: + Temperatura
+
+    class Agua
+    Agua: + Sabor
+    Agua: + Tamaño
+    class Cerveza
+    Cerveza: + Sabor
+    Cerveza: + Alcohol
+    class Jugo
+    Jugo: + Sabor
+    Jugo: + Adición de azúcar
+
+    Bebida<|--Agua
+    Bebida<|--Cerveza
+    Bebida<|--Jugo
+
+```
 [![](https://mermaid.ink/img/pako:eNqlVtuO2jAQ_ZUoT61YfgBVlRbQLkLtijas-sLLNBnAwomR4-yKpvvv9QVyIeM1q_LEzInPmbFnPK7jVGQYT-KUQ1nOGewk5Jsi0r-VFFmVqujL3_E4SvZMKsK_gkKVhH8usaT8S0gPSBElB1og2QtJKiSvCAolgUy5qEokgLXNIiKQmQDSv0QoKPGFEBmjJJKKkURrqRMvNUitOZoUdTpUMg9CKA_0XGQoPdgUdmQ6r8jliUoIdGTObyvhgtbOF0Xjn7hFiUWK0Xj8NWKFapAnyJ2zVLJxTiUU2cC7kuxMsOUCWopEifTwo9LFxNRpIDATXMgBV8L-DGW_m5pgwK-B0Qx4WnGNzlmZiqpQnz73Yxg9HzMN20g01tEfPaKaowLGSw00pG_d7bKV1W5WwhFf8BsWu70axPjAhj6dIge5Ph2blKKuvKVvY-h_0gvENmQbyC9gperSdrb8xAdeo2UZevlSOrbBWx1revJN9nAkleyi0M66G6NVcjaVkqFc3hs0GL29bTrHZUxP9N4dtOdy6J2LrzZMf__XmViKoI67EW-swidMD960HFNI0F20dZCSqngj49aHVNZXvfVRlfVV89AqZgLUnXaEq3po2zHSnAYPFpkdHrccuydwuz4Ut5tErYqxSZGVeK9vHE24b_QE69SXtj6SkPk-KNFMypqi692KzafBzmgmbEt6nyr2oqeNtweaNcGQLzO6Hs6m7hjTTYykmqmoC0dQrJn6rVrjIg_D1t1vPY19mTbLg9r6VdGqasPHqKEbusO-RToXu3OQOTxiXipRoHdAnhcHVRfdLteGl3ABZFXFd3GOMgeW6TezZdrEao85buKJ_pvhFiquNvGmMJ9CpURyKtJ4omSFd3FlnxjnV7Zzvv0DH0d9QQ?type=png)](https://mermaid.live/edit#pako:eNqlVtuO2jAQ_ZUoT61YfgBVlRbQLkLtijas-sLLNBnAwomR4-yKpvvv9QVyIeM1q_LEzInPmbFnPK7jVGQYT-KUQ1nOGewk5Jsi0r-VFFmVqujL3_E4SvZMKsK_gkKVhH8usaT8S0gPSBElB1og2QtJKiSvCAolgUy5qEokgLXNIiKQmQDSv0QoKPGFEBmjJJKKkURrqRMvNUitOZoUdTpUMg9CKA_0XGQoPdgUdmQ6r8jliUoIdGTObyvhgtbOF0Xjn7hFiUWK0Xj8NWKFapAnyJ2zVLJxTiUU2cC7kuxMsOUCWopEifTwo9LFxNRpIDATXMgBV8L-DGW_m5pgwK-B0Qx4WnGNzlmZiqpQnz73Yxg9HzMN20g01tEfPaKaowLGSw00pG_d7bKV1W5WwhFf8BsWu70axPjAhj6dIge5Ph2blKKuvKVvY-h_0gvENmQbyC9gperSdrb8xAdeo2UZevlSOrbBWx1revJN9nAkleyi0M66G6NVcjaVkqFc3hs0GL29bTrHZUxP9N4dtOdy6J2LrzZMf__XmViKoI67EW-swidMD960HFNI0F20dZCSqngj49aHVNZXvfVRlfVV89AqZgLUnXaEq3po2zHSnAYPFpkdHrccuydwuz4Ut5tErYqxSZGVeK9vHE24b_QE69SXtj6SkPk-KNFMypqi692KzafBzmgmbEt6nyr2oqeNtweaNcGQLzO6Hs6m7hjTTYykmqmoC0dQrJn6rVrjIg_D1t1vPY19mTbLg9r6VdGqasPHqKEbusO-RToXu3OQOTxiXipRoHdAnhcHVRfdLteGl3ABZFXFd3GOMgeW6TezZdrEao85buKJ_pvhFiquNvGmMJ9CpURyKtJ4omSFd3FlnxjnV7Zzvv0DH0d9QQ)
 
 Para una mejor visualización: https://www.mermaidchart.com/raw/f10fee59-590a-438b-94d8-877d5570daf4?theme=light&version=v0.1&format=svg
