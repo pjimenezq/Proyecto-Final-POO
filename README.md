@@ -52,26 +52,26 @@ En la siguiente tabla se muestra el resultado de este paso.
 
 ||Producto|Ref.|Marca|Precio|Color|Talla|Material|
 |---|-----------------|------|---------|---------|--------|------|--------|
-|1|Shirt|20-01|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|2|Pants|20-02|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|3|Dress|20-03|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|4|Jacket|20-04|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|5|Skirt|20-05|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|6|Shorts|20-06|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|7|Sweater|20-07|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|8|Blouse|20-08|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|9|T-Shirt|20-09|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|10|Coat|20-10|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|11|Jeans|20-11|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|12|Hoodie|20-12|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|13|Suit|20-13|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|14|Tracksuit|20-14|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|15|Sportswear|20-15|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|16|Footwear|20-16|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|17|Underwear|20-17|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|18|Bag|20-18|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|19|Jewelry|20-19|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
-|20|Hat|20-20|NOTCLOTHES|0|Negro|S-M-L|Poliéster|
+|1|Shirt|20-01|NOTCLOTHES|$200 USD|Negro|S-M-L|Poliéster|
+|2|Pants|20-02|NOTCLOTHES|$900 USD|Negro|S-M-L|Poliéster|
+|3|Dress|20-03|NOTCLOTHES|$1200 USD|Negro|S-M-L|Poliéster|
+|4|Jacket|20-04|NOTCLOTHES|$2200 USD|Negro|S-M-L|Poliéster|
+|5|Skirt|20-05|NOTCLOTHES|$400 USD|Negro|S-M-L|Poliéster|
+|6|Shorts|20-06|NOTCLOTHES|$100 USD|Negro|S-M-L|Poliéster|
+|7|Sweater|20-07|NOTCLOTHES|$900 USD|Negro|S-M-L|Poliéster|
+|8|Blouse|20-08|NOTCLOTHES|$400 USD|Negro|S-M-L|Poliéster|
+|9|T-Shirt|20-09|NOTCLOTHES|$400 USD|Negro|S-M-L|Poliéster|
+|10|Coat|20-10|NOTCLOTHES|$1200 USD|Negro|S-M-L|Poliéster|
+|11|Jeans|20-11|NOTCLOTHES|$200 USD|Negro|S-M-L|Poliéster|
+|12|Hoodie|20-12|NOTCLOTHES|$500 USD|Negro|S-M-L|Poliéster|
+|13|Suit|20-13|NOTCLOTHES|$3200 USD|Negro|S-M-L|Poliéster|
+|14|Tracksuit|20-14|NOTCLOTHES|$3200 USD|Negro|S-M-L|Poliéster|
+|15|Sportswear|20-15|NOTCLOTHES|$200 USD|Negro|S-M-L|Poliéster|
+|16|Footwear|20-16|NOTCLOTHES|$4200 USD|Negro|S-M-L|Poliéster|
+|17|Underwear|20-17|NOTCLOTHES|$100 USD|Negro|S-M-L|Poliéster|
+|18|Bag|20-18|NOTCLOTHES|$1000 USD|Negro|S-M-L|Poliéster|
+|19|Jewelry|20-19|NOTCLOTHES|$3200 USD|Negro|S-M-L|Poliéster|
+|20|Hat|20-20|NOTCLOTHES|$1200 USD|Negro|S-M-L|Poliéster|
 
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
