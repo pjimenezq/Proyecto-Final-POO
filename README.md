@@ -26,7 +26,12 @@ En primer lugar, se hizo una investigación sobre el problema planteado. Este pa
 
 Se investigó sobre lo que es una sistema de gestión de inventario y la forma en la que funciona. El entender este concepto del mundo real facilitó e hizo más eficiente el proceso de abstraer sus características principales, para luego representarlas gráficamente mediante clases, objetos y sus relaciones.
 
-De este paso se obtuvo que un sistema de gestión de inventario es....AQUÍ VA LA DEFINICIÓN
+
+De acuerdo con Gabriel Baca (2014) en su libro Introducción a la Ingenieria Industrial el inventario es entendido como la acumulación de artículos, materiales o productos que representan valor y utilidad para determinada empresa 
+
+Sobre este contexto se entiende el Sistema de Gestión  de Inventario como la acumulación y administración de artículo, materiales o productos que representan valor y utilidad para una empresa. 
+
+
 ### Empresa
 En segundo lugar, se creó el escenario en el que se haría uso del sistema de gestión de inventario. Por lo tanto se ideó una empresa, se pensó en sus características principales y en el tipo de productos que vende.
 
