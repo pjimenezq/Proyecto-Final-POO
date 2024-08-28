@@ -294,7 +294,7 @@ class Bodega():
             print("Código inexistente, la salida del producto no se puede registrar.")
 
     def eliminar_registro_salida(self,numero_de_registro:int):
-        self.productos[self.salidas[numero_de_registro]["CODIGO"]]["SALIDAS"]+=int(self.salidas.get(numero_de_registro).get("CANTIDAD"))
+        self.productos[self.salidas[numero_de_registro]["CODIGO"]]["SALIDAS"]-=int(self.salidas.get(numero_de_registro).get("CANTIDAD"))
         self.productos[self.salidas[numero_de_registro]["CODIGO"]]["STOCK"]+=int(self.salidas.get(numero_de_registro).get("CANTIDAD"))
         del self.salidas[numero_de_registro]
 
