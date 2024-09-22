@@ -67,11 +67,13 @@ En la siguiente tabla se muestra el resultado de este paso.
 |13|TRACKTORSHOES|18-03|$3200 USD|Negro|38-39-40-41|Cuero|
 |14|ADSHOES|18-04|$3200 USD|Negro|38-39-40-41|Cuero|
 |15|NOTSHOES|18-05|$13.000 USD|Negro|UNICA|Cuero|
-|16|CandyNECKLACE|17-01|$200 USD|UNICA|6-8|Poliéster|Plata|
-|17|BulletsNECKLACE|18-02|$100 USD|Negro|UNICA|Poliéster|Titanio|
-|18|NONECK-LACE|18-03|$1000 USD|Negro|UNICA|Poliéster|Plata|
+|16|CandyNECKLACE|17-01|$200 USD|Blanco|UNICA|Poliéster|Plata|
+|17|BulletsNECKLACE|18-02|$100 USD|Gris|UNICA|Poliéster|Titanio|
+|18|NONECK-LACE|18-03|$1000 USD|Plata|UNICA|Poliéster|Plata|
 |19|MERCURYNECKLACE|18-04|$3200 USD|Negro|UNICA|Poliéster|Mercurio|
-|20|SilverNecklace|18-05|$1200 USD|Negro|UNICA|Poliéster|Plata|
+|20|SilverNecklace|18-05|$1200 USD|Plata|UNICA|Poliéster|Plata|
+
+NOTCLOTHES maneja cinco líneas de productos con cinco tipos de referencias diferentes entre sí. 
 
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
