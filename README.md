@@ -52,26 +52,26 @@ En la siguiente tabla se muestra el resultado de este paso.
 
 ||Producto|Ref.|Precio|Color|Talla|Material Principal|
 |---|-----------------|------|---------|---------|--------|------|
-|1|Shirt|20-01|$200 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|2|Pants|20-02|$900 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|3|Dress|20-03|$1200 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|4|Jacket|20-04|$2200 USD|Negro|XS-S-M-L-XL-XL|Cuero|
-|5|Skirt|20-05|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|6|Shorts|20-06|$100 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|7|Sweater|20-07|$900 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|8|Blouse|20-08|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|9|T-Shirt|20-09|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|10|Coat|20-10|$1200 USD|Negro|XS-S-M-L-XL-XL|Cuero|
-|11|Jeans|20-11|$200 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|12|Hoodie|20-12|$500 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|13|Suit|20-13|$3200 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|14|Tracksuit|20-14|$3200 USD|Negro|XS-S-M-L-XL-XL|Nylon|
-|15|Sportswear|20-15|$200 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|16|Footwear|20-16|$4200 USD|Negro|6-8|Poliéster|Cuero|
-|17|Underwear|20-17|$100 USD|Negro|Unica|Poliéster|Algodon|
-|18|Bag|20-18|$1000 USD|Negro|UNICA|Poliéster|Algodon|
-|19|Jewelry|20-19|$3200 USD|Negro|UNICA|Poliéster|Oro|
-|20|Hat|20-20|$1200 USD|Negro|UNICA|Poliéster|Cuero|
+|1|SKShirt|20-01|$200 USD|Negro|XS-S-M-L-XL-XL|Seda|
+|2|MKShirt|20-02|$900 USD|Blanco|XS-S-M-L-XL-XL|Seda|
+|3|NKShirt|20-03|$1200 USD|Gris|XS-S-M-L-XL-XL|Seda|
+|4|RKShirt|20-04|$2200 USD|Beige|XS-S-M-L-XL-XL|Seda|
+|5|PkShirt|20-05|$400 USD|Negro|XS-S-M-L-XL-XL|Seda|
+|6|CargoPants|19-01|$100 USD|Negro|XS-S-M-L-XL-XL|Algodon|
+|7|NCPants|19-02|$900 USD|Negro|XS-S-M-L-XL-XL|Algodon|
+|8|WIDEPants|19-03|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
+|9|XASSPants|19-04|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
+|10|DadPants|19-05|$1200 USD|Negro|XS-S-M-L-XL-XL|Cuero|
+|11|SMGSHOES|18-01|$200 USD|Negro|38-39-40-41|Cuero|
+|12|HODSHOES|18-02|$500 USD|Negro|38-39-40-41|Cuero|
+|13|TRACKTORSHOES|18-03|$3200 USD|Negro|38-39-40-41|Cuero|
+|14|ADSHOES|18-04|$3200 USD|Negro|38-39-40-41|Cuero|
+|15|NOTSHOES|18-05|$13.000 USD|Negro|UNICA|Cuero|
+|16|CandyNECKLACE|17-01|$200 USD|UNICA|6-8|Poliéster|Plata|
+|17|BulletsNECKLACE|18-02|$100 USD|Negro|UNICA|Poliéster|Titanio|
+|18|NONECK-LACE|18-03|$1000 USD|Negro|UNICA|Poliéster|Plata|
+|19|MERCURYNECKLACE|18-04|$3200 USD|Negro|UNICA|Poliéster|Mercurio|
+|20|SilverNecklace|18-05|$1200 USD|Negro|UNICA|Poliéster|Plata|
 
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
