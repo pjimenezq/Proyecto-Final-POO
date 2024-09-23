@@ -413,7 +413,6 @@ if __name__=="__main__":
 ## Cómo instalar y usar el desarrollo
 ## Requerimientos para crear un entorno virtual
 ## Conclusiones
-**Conclusión del Proyecto de Gestión de Inventario en Python**
 
 En el desarrollo de este proyecto, hemos adquirido conocimientos fundamentales sobre la **gestión de inventarios** y su implementación práctica mediante el uso de la programación orientada a objetos. La investigación inicial nos permitió comprender la importancia de un sistema de gestión de inventarios, el cual es esencial para cualquier empresa que maneje productos físicos. Este conocimiento teórico fue la base para la creación de una aplicación que emula un sistema de gestión de inventarios, permitiéndonos aplicar conceptos de programación orientada a objetos, diseño de clases y manejo de datos.
 
