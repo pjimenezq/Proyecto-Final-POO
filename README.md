@@ -455,7 +455,7 @@ Para nuestro segundo archivo:
    
 **métodos de la clase bodega:**
 - *guardar_informacion():* Llama las funciones de guardar información de productos, entradas, salidas y devoluciones.
-- *imprimir_caracteristicas_productos_bodega()* Para cada Producto en la bodega, se llama su método imprimir_informacion_producto()
+- *imprimir_caracteristicas_productos_bodega():* Para cada Producto en la bodega, se llama su método imprimir_informacion_producto()
 - *imprimir_caracteristicas_producto_especifico()* Se imprime la lista de "productos_en_bodega", para que el usuario seleccione el producto que desea imprimir. Esto se lleva a cabo llamando método imprimir_informacion_producto()
 - *imprimir_productos_bodega():* En este caso, se imprimirá toda la información correspondiente a cada uno de los productos en bodega, en caso de no tener registros, no será posible obtener información.
 - *crear_archivo_productos_bodega():* Es aquí donde se le dará uso al módulo JSON, este método creará un archivo para almacenar la información de los productos en bodega
