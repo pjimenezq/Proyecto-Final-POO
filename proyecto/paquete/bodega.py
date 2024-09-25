@@ -12,7 +12,7 @@ class Producto():
         self.material=material
 
     def imprimir_informacion_producto(self):
-        informacion_producto = {"REFERENCIA":self.referencia, "ARTÍCULO":self.articulo, "PRECIO":self.precio, "COLOR":self.color, "TALLA":self.talla, "MATERIAL": self.material}
+        informacion_producto = {"REFERENCIA":self.referencia, "ARTICULO":self.articulo, "PRECIO":self.precio, "COLOR":self.color, "TALLA":self.talla, "MATERIAL": self.material}
         print(informacion_producto)
 
 class Bodega():
@@ -25,7 +25,7 @@ class Bodega():
         for producto in args:
             self.productos_en_bodega.append(producto)
         for x in range(len(args)):
-            self.productos[args[x].referencia]={"ARTÍCULO":args[x].articulo, "PRECIO":args[x].precio,"ENTRADAS": 0, "SALIDAS": 0, "DEVOLUCIÓN":0, "STOCK":0}
+            self.productos[args[x].referencia]={"ARTICULO":args[x].articulo, "PRECIO":args[x].precio,"ENTRADAS": 0, "SALIDAS": 0, "DEVOLUCION":0, "STOCK":0}
 
     def guardar_informacion(self):
         self.guardar_informacion_devoluciones_bodega()
@@ -105,19 +105,22 @@ class Bodega():
         writeFile.close()
 
     def registrar_entrada_producto(self):
+        print("\nEstos son los productos que hay en bodega")
+        for indice, producto in enumerate(self.productos_en_bodega):
+            print(producto.referencia,":", producto.articulo)
         print("\nIngrese la información correspondiente a la entrada del producto:")
         referencia_producto_entrada=str(input("Ingrese la referencia del producto: "))
-        fecha_entrada=str(input("Ingrese la fecha de entrada: "))
+        fecha_entrada=str(input("Ingrese la fecha de entrada (DD/MM/AAAA): "))
         cantidad_producto_entrada=int(input("Ingrese la cantidad: "))
         if referencia_producto_entrada in self.productos:
             if len(self.entradas)>0:
-                numero_ultimo_registro=max(self.entradas)
+                numero_ultimo_registro=int((max(self.entradas)))
             else:
                 numero_ultimo_registro=0
-            self.entradas[int(numero_ultimo_registro+1)]={"REFERENCIA":referencia_producto_entrada, "ARTÍCULO":self.productos.get(referencia_producto_entrada).get("ARTÍCULO"), "FECHA":fecha_entrada, "CANTIDAD":cantidad_producto_entrada}
+            self.entradas[numero_ultimo_registro+1]={"REFERENCIA":referencia_producto_entrada, "ARTICULO":self.productos.get(referencia_producto_entrada).get("ARTICULO"), "FECHA":fecha_entrada, "CANTIDAD":cantidad_producto_entrada}
             self.productos[referencia_producto_entrada]["ENTRADAS"]+=int(cantidad_producto_entrada)
             self.productos[referencia_producto_entrada]["STOCK"]+=int(cantidad_producto_entrada)
-            print("La entrada del producto",self.productos.get(referencia_producto_entrada).get("ARTÍCULO"),"fue registrada exitosamente.")
+            print("La entrada del producto",self.productos.get(referencia_producto_entrada).get("ARTICULO"),"fue registrada exitosamente.")
         else:
             print("La entrada del producto no se puede registrar porque la referencia ingresada no existe en el inventario de la bodega.")
     
@@ -167,22 +170,25 @@ class Bodega():
         writeFile.close()
 
     def registrar_salida_producto(self):
+        print("\nEstos son los productos que hay en bodega")
+        for indice, producto in enumerate(self.productos_en_bodega):
+            print(producto.referencia,":", producto.articulo)
         print("\nIngrese la información correspondiente a la salida del producto:")
         referencia_producto_salida=str(input("Ingrese la referencia del producto: "))
-        fecha_salida=str(input("Ingrese la fecha de salida: "))
+        fecha_salida=str(input("Ingrese la fecha de salida (DD/MM/AAAA): "))
         cantidad_producto_salida=int(input("Ingrese la cantidad: "))
         if referencia_producto_salida in self.productos:
             if cantidad_producto_salida<=self.productos.get(referencia_producto_salida).get("STOCK"):
                 if len(self.salidas)>0:
-                    numero_ultimo_registro=max(self.salidas)
+                    numero_ultimo_registro=int(max(self.salidas))
                 else:
                     numero_ultimo_registro=0
-                self.salidas[int(numero_ultimo_registro+1)]={"REFERENCIA":referencia_producto_salida, "ARTÍCULO":self.productos.get(referencia_producto_salida).get("ARTÍCULO"), "FECHA":fecha_salida, "CANTIDAD":cantidad_producto_salida}
+                self.salidas[int(numero_ultimo_registro+1)]={"REFERENCIA":referencia_producto_salida, "ARTICULO":self.productos.get(referencia_producto_salida).get("ARTICULO"), "FECHA":fecha_salida, "CANTIDAD":cantidad_producto_salida}
                 self.productos[referencia_producto_salida]["SALIDAS"]+=int(cantidad_producto_salida)
                 self.productos[referencia_producto_salida]["STOCK"]-=int(cantidad_producto_salida)
-                print("La salida del producto",self.productos.get(referencia_producto_salida).get("ARTÍCULO"),"fue registrada exitosamente.")
+                print("La salida del producto",self.productos.get(referencia_producto_salida).get("ARTICULO"),"fue registrada exitosamente.")
             else:
-                print("La salida del producto",self.productos.get(referencia_producto_salida).get("ARTÍCULO"),"no se puede registrar porque no hay suficientes unidades del producto en el stock.")
+                print("La salida del producto",self.productos.get(referencia_producto_salida).get("ARTICULO"),"no se puede registrar porque no hay suficientes unidades del producto en el stock.")
         else:
             print("La salida del producto no se puede registrar porque la referencia ingresada no existe en el inventario de la bodega.")
 
@@ -232,22 +238,25 @@ class Bodega():
         writeFile.close()
 
     def registrar_devolucion_producto(self):
+        print("\nEstos son los productos que hay en bodega")
+        for indice, producto in enumerate(self.productos_en_bodega):
+            print(producto.referencia,":", producto.articulo)
         print("\nIngrese la información correspondiente a la devolución del producto:")
         referencia_producto_devolucion=str(input("Ingrese la referencia del producto: "))
-        fecha_devolucion=str(input("Ingrese la fecha de la devolución: "))
+        fecha_devolucion=str(input("Ingrese la fecha de la devolución (DD/MM/AAAA): "))
         cantidad_producto_devolucion=int(input("Ingrese la cantidad: "))
         if referencia_producto_devolucion in self.productos:
             if cantidad_producto_devolucion<=self.productos.get(referencia_producto_devolucion).get("SALIDAS"):
                 if len(self.devoluciones)>0:
-                    numero_ultimo_registro=max(self.devoluciones)
+                    numero_ultimo_registro=int(max(self.devoluciones))
                 else:
                     numero_ultimo_registro=0
-                self.devoluciones[int(numero_ultimo_registro+1)]={"REFERENCIA":referencia_producto_devolucion, "ARTÍCULO":self.productos.get(referencia_producto_devolucion).get("ARTÍCULO"), "FECHA":fecha_devolucion, "CANTIDAD":cantidad_producto_devolucion}
-                self.productos[referencia_producto_devolucion]["DEVOLUCIÓN"]+=int(cantidad_producto_devolucion)
+                self.devoluciones[int(numero_ultimo_registro+1)]={"REFERENCIA":referencia_producto_devolucion, "ARTICULO":self.productos.get(referencia_producto_devolucion).get("ARTICULO"), "FECHA":fecha_devolucion, "CANTIDAD":cantidad_producto_devolucion}
+                self.productos[referencia_producto_devolucion]["DEVOLUCION"]+=int(cantidad_producto_devolucion)
                 self.productos[referencia_producto_devolucion]["STOCK"]+=int(cantidad_producto_devolucion)
-                print("La devolución del producto",self.productos.get(referencia_producto_devolucion).get("ARTÍCULO"),"fue registrada exitosamente.")
+                print("La devolución del producto",self.productos.get(referencia_producto_devolucion).get("ARTICULO"),"fue registrada exitosamente.")
             else: 
-                print("La salida del producto", self.productos.get(referencia_producto_devolucion).get("ARTÍCULO"), "no se puede registrar porque la cantidad de devolución no puede ser mayor a la cantidad de salidas del producto.")
+                print("La salida del producto", self.productos.get(referencia_producto_devolucion).get("ARTICULO"), "no se puede registrar porque la cantidad de devolución no puede ser mayor a la cantidad de salidas del producto.")
         else:
             print("La devolución del producto no se puede registrar porque la referencia ingresada no existe en el inventario de la bodega.")
     
@@ -256,7 +265,7 @@ class Bodega():
         confirmacion=int(input("Presione el número 1 si usted desea eliminar el registro de la devolución número "+str(numero_de_registro_devolucion)+"\nSi desea cancelar la solicitud de eliminar el registro de devolución presione enter."))
         if confirmacion==1:
             if numero_de_registro_devolucion in self.devoluciones:
-                self.productos[self.entradas[numero_de_registro_devolucion]["REFERENCIA"]]["DEVOLUCIÓN"]-=int(self.devoluciones.get(numero_de_registro_devolucion).get("CANTIDAD"))
+                self.productos[self.entradas[numero_de_registro_devolucion]["REFERENCIA"]]["DEVOLUCION"]-=int(self.devoluciones.get(numero_de_registro_devolucion).get("CANTIDAD"))
                 self.productos[self.devoluciones[numero_de_registro_devolucion]["REFERENCIA"]]["STOCK"]-=int(self.devoluciones.get(numero_de_registro_devolucion).get("CANTIDAD"))
                 del self.devoluciones[numero_de_registro_devolucion]
                 print("La devolución con el número de registro ", numero_de_registro_devolucion, "fue eliminada exitosamente.")
@@ -299,14 +308,14 @@ class Bodega():
     def control(self, tipo_control):#Método para hacer conteo del inventario y confirmar que los datos del sistema sean iguales a los del conteo
         control_correcto={}
         control_incorrecto={}
-        if tipo_control==1:##############
+        if tipo_control==1:
             for x in self.productos:
-                cantidad=int(input("Digite la cantidad de "+ str(x)+ " : "+str(self.productos.get(x).get("ARTÍCULO"))+" que hay en la bodega: "))
+                cantidad=int(input("Digite la cantidad de "+ str(x)+ " : "+str(self.productos.get(x).get("ARTICULO"))+" que hay en la bodega: "))
                 if cantidad==int(self.productos.get(x).get("STOCK")):
-                    control_correcto[x]={"ARTÍCULO":self.productos.get(x).get("ARTÍCULO"),"CANTIDAD":self.productos.get(x).get("STOCK")}
+                    control_correcto[x]={"ARTICULO":self.productos.get(x).get("ARTICULO"),"CANTIDAD":self.productos.get(x).get("STOCK")}
                     print("Los datos ingresados SÍ coinciden con los datos del sistema.")
                 else:
-                    control_incorrecto[x]={"ARTÍCULO":self.productos.get(x).get("ARTÍCULO"),"CANTIDAD EN EL PROGRAMA":self.productos.get(x).get("STOCK"), "CANTIDAD DEL CONTEO":cantidad}
+                    control_incorrecto[x]={"ARTICULO":self.productos.get(x).get("ARTICULO"),"CANTIDAD EN EL PROGRAMA":self.productos.get(x).get("STOCK"), "CANTIDAD DEL CONTEO":cantidad}
                     print("Los datos ingresados NO coinciden con los datos del sistema. ")
             if len(control_correcto)>0:
                 print("Los productos en los que SÍ coincide la cantidad en el sistema y en el conteo son: ")
@@ -319,16 +328,21 @@ class Bodega():
         elif tipo_control==2:
             producto_control=str(input("Ingrese la referencia del producto del cual desea hacer el control: "))
             if producto_control in self.productos:
-                cantidad=int(input("Digite la cantidad de "+ producto_control + " : "+str(self.productos.get(producto_control).get("ARTÍCULO"))+" que hay en la bodega: "))
+                cantidad=int(input("Digite la cantidad de "+ producto_control + " : "+str(self.productos.get(producto_control).get("ARTICULO"))+" que hay en la bodega: "))
                 if cantidad==int(self.productos.get(producto_control).get("STOCK")):
                     print("Los datos ingresados SÍ coinciden con los datos del sistema.")
                 else:
                     print("Los datos ingresados NO coinciden con los datos del sistema. ")
-                    control_incorrecto[producto_control]={"ARTÍCULO":self.productos.get(producto_control).get("ARTÍCULO"),"CANTIDAD EN EL PROGRAMA":self.productos.get(producto_control).get("STOCK"), "CANTIDAD DEL CONTEO":cantidad}
+                    control_incorrecto[producto_control]={"ARTICULO":self.productos.get(producto_control).get("ARTICULO"),"CANTIDAD EN EL PROGRAMA":self.productos.get(producto_control).get("STOCK"), "CANTIDAD DEL CONTEO":cantidad}
                     for k,v in control_incorrecto.items():
                         print(k,v)
             else:
                 print("La referencia ingresada no existe en el inventario de la bodega.")
+        elif tipo_control==3:
+            print("A continuación se muestran los productos que hay en bodega y su stock en el sistema")
+            for producto in self.productos_en_bodega:
+                print(producto.referencia, ":", producto.articulo,"  STOCK:", self.productos.get(producto.referencia).get("STOCK"))
+
         else:
             print("El número ingresado no es válido.")
 
@@ -340,10 +354,10 @@ class Bodega():
         print("\nA continuación se presentan las acciones que se pueden llevar a cabo en cada una de las categorías: ")
         print("\nCategoria Productos \n1. Imprimir características de todos los productos \n2. Imprimir características de un solo producto")
         print("\nCategoria Bodega \n1. Imprimir información e historial de movimientos de todos los productos en bodega \n2. Imprimir información e historial de movimientos de un producto específico en bodega \n3. Crear archivo de la información e historial de movimientos de todos los productos en bodega \n4. Eliminar todo el historial de movimientos de todos los productos en bodega")
-        print("\nCategoría Entradas \n1. Registrar entrada de un producto a bodega  \n2. Eliminar el registro de una entrada  \n3. Imprimir historial de entradas \n4. Crear archivo del historial de entradas ")
-        print("\nCategoría Salidas \n1. Registrar salida de un producto  \n2. Eliminar el registro de una salida  \n3. Imprimir historial de salidas \n4. Crear archivo del historial de salidas")
-        print("\nCategoría Devoluciones \n1. Registrar devolución de un producto  \n2. Eliminar el registro de una devolución  \n3. Imprimir historial de devoluciones \n4. Crear archivo del historial de devoluciones")
-        print("\nCategoría Control \n1. Hacer control extracontable de todo el inventario \n2. Hacer control extracontable de un solo producto")
+        print("\nCategoría Entradas \n1. Registrar entrada de un producto a bodega \n2. Eliminar el registro de una entrada \n3. Imprimir historial de entradas \n4. Crear archivo del historial de entradas ")
+        print("\nCategoría Salidas \n1. Registrar salida de un producto \n2. Eliminar el registro de una salida \n3. Imprimir historial de salidas \n4. Crear archivo del historial de salidas")
+        print("\nCategoría Devoluciones \n1. Registrar devolución de un producto \n2. Eliminar el registro de una devolución \n3. Imprimir historial de devoluciones \n4. Crear archivo del historial de devoluciones")
+        print("\nCategoría Control \n1. Hacer control extracontable de todo el inventario \n2. Hacer control extracontable de un solo producto \n3. Imprimir el stock de todos los productos que hay en bodega")
         print("\nEste sistema se maneja por medio de la consola, al hacer uso de este debe verificar con cuidado que los números y datos que ingresa son los correctos.")
         
     def menu(self):
@@ -375,7 +389,7 @@ class Bodega():
                     if seleccion_accion==3:
                         print("\nAcceder al instructivo")
                         self.mostrar_instructivo()
-                        salir=input("Presione enter para  salir ")
+                        salir=input("Presione enter para salir ")
                     if seleccion_accion==4:
                         break
             if seleccion_categoria==3:
@@ -392,7 +406,7 @@ class Bodega():
                     if seleccion_accion==2:
                         print("\nImprimir información e historial de movimientos de un producto específico en bodega")
                         self.imprimir_producto_especifico_bodega()
-                        salir=input("\nPresione enter para  salir ")
+                        salir=input("\nPresione enter para salir ")
                     if seleccion_accion==3:
                         print("\nCrear archivo de la información e historial de movimientos de todos los productos en bodega")
                         self.crear_archivo_productos_bodega()
@@ -401,17 +415,17 @@ class Bodega():
                         print("\nEliminar todo el historial de movimientos de todos los productos en bodega ")
                         self.eliminar_todos_los_registros_de_movimientos()
                         self.guardar_informacion()
-                        salir=input("Presione enter para  salir ")
+                        salir=input("Presione enter para salir ")
                     if seleccion_accion==5:
                         print("\nAcceder al instructivo")
                         self.mostrar_instructivo()
-                        salir=input("Presione enter para  salir ")
+                        salir=input("Presione enter para salir ")
                     if seleccion_accion==6:
                         break
             if seleccion_categoria==4:
                 while True:
                     print("\nEntradas")
-                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Registrar entrada de un producto a bodega  \n2. Eliminar el registro de una entrada  \n3. Imprimir historial de entradas \n4. Crear archivo del historial de entradas \n5. Acceder al instructivo \n6. Salir \nNúmero: "))
+                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Registrar entrada de un producto a bodega \n2. Eliminar el registro de una entrada \n3. Imprimir historial de entradas \n4. Crear archivo del historial de entradas \n5. Acceder al instructivo \n6. Salir \nNúmero: "))
                     if seleccion_accion not in range(1,7):
                         print("El número ingresado no es válido. Intente nuevamente.")
                         continue
@@ -463,13 +477,13 @@ class Bodega():
                     if seleccion_accion==5:
                         print("\nAcceder al instructivo")
                         self.mostrar_instructivo()
-                        salir=input("Presione enter para  salir ")
+                        salir=input("Presione enter para salir ")
                     if seleccion_accion==6:
                         break
             if seleccion_categoria==5:
                 while True:
                     print("\nSalidas")
-                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Registrar salida de un producto  \n2. Eliminar el registro de una salida  \n3. Imprimir historial de salidas \n4. Crear archivo del historial de salidas \n5. Acceder al instructivo \n6. Salir \nNúmero: "))
+                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Registrar salida de un producto \n2. Eliminar el registro de una salida \n3. Imprimir historial de salidas \n4. Crear archivo del historial de salidas \n5. Acceder al instructivo \n6. Salir \nNúmero: "))
                     if seleccion_accion not in range(1,7):
                         print("El número ingresado no es válido. Intente nuevamente.")
                         continue
@@ -521,13 +535,13 @@ class Bodega():
                     if seleccion_accion==5:
                         print("\nAcceder al instructivo")
                         self.mostrar_instructivo()
-                        salir=input("Presione enter para  salir ")
+                        salir=input("Presione enter para salir ")
                     if seleccion_accion==6:
                         break
             if seleccion_categoria==6:
                 while True:
                     print("\nDevoluciones")
-                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Registrar devolución de un producto  \n2. Eliminar el registro de una devolución  \n3. Imprimir historial de devoluciones \n4. Crear archivo del historial de devoluciones \n5. Acceder al instructivo \n6. Salir \nNúmero: "))
+                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Registrar devolución de un producto \n2. Eliminar el registro de una devolución \n3. Imprimir historial de devoluciones \n4. Crear archivo del historial de devoluciones \n5. Acceder al instructivo \n6. Salir \nNúmero: "))
                     if seleccion_accion not in range(1,7):
                         print("El número ingresado no es válido. Intente nuevamente.")
                         continue
@@ -579,14 +593,14 @@ class Bodega():
                     if seleccion_accion==5:
                         print("\nAcceder al instructivo")
                         self.mostrar_instructivo()
-                        salir=input("Presione enter para  salir ")
+                        salir=input("Presione enter para salir ")
                     if seleccion_accion==6:
                         break
             if seleccion_categoria==7:
                 while True:
                     print("\nControl")
-                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Realizar el control extracontable de todo el inventario \n2. Realizar el control extracontable de un solo producto \n3. Acceder al instructivo \n4. Salir \nNúmero: "))
-                    if seleccion_accion not in range(1,5):
+                    seleccion_accion=int(input("\nIngrese el número correspondiente a la acción que desea ejecutar: \n1. Realizar el control extracontable de todo el inventario \n2. Realizar el control extracontable de un solo producto \n3. Imprimir el stock de todos los productos que hay en bodega \n4. Acceder al instructivo \n5. Salir \nNúmero: "))
+                    if seleccion_accion not in range(1,6):
                         print("El número ingresado no es válido. Intente nuevamente.")
                         continue
                     if seleccion_accion==1:
@@ -620,12 +634,15 @@ class Bodega():
                             if siguiente_paso==2:
                                 break
                     if seleccion_accion==3:
+                        print("\n3. Imprimir el stock de todos los productos que hay en bodega")
+                        self.control(3)
+                        salir=input("Presione enter para salir ")
+                    if seleccion_accion==4:
                         print("\nAcceder al instructivo")
                         self.mostrar_instructivo()
-                        salir=input("Presione enter para  salir ")
-                    if seleccion_accion==4:
+                        salir=input("Presione enter para salir ")
+                    if seleccion_accion==5:
                         break
             if seleccion_categoria == 8:
                 print("Se ha cerrado el sistema de gestión de inventario.")
                 break
-
