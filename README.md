@@ -468,7 +468,7 @@ Para nuestro segundo archivo:
 - *imprimir_entradas_bodega():* Este método permitirá imprimir el historial de los registro de entrada de la bodega
 - *crear_archivo_entradas_bodega():* Nuevamente, este método implementará el módulo JSON, para crear un archivo que almacene los datos de entrada de la bodega
 - *eliminar_historial_entradas():* Se elimina la información que tenía el diccionario de entradas.
-- *abrir_archivo_entradas_bodega():*Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las entradas de productos a bodega (en caso de que exista)
+- *abrir_archivo_entradas_bodega():* Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las entradas de productos a bodega (en caso de que exista)
 - *guardar_informacion_entradas_bodega():* Se utiliza para guardar en el archivo tipo json los cambios realizados a la información de las entradas a bodega.
 - *registrar_salida_producto():* Cada vez que salgan cantidades del stock de la bodega se podrán registrar mediante este método, modificando los datos de salida y los datos de stock, con la diferencia que los datos de salida son la cantidad retirada de la bodega, y los datos de stock serán los datos actualizados de las cantidades aún existentes.
 - *eliminar_registro_salida():* En caso de haber cometido un error al registrar las salidas, con este método se podrán eliminar esas cantidades retiradas, al igual que con el método anterior, modificará las cantidades de entrada y las cantidades en stock
