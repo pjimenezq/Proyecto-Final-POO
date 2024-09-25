@@ -482,7 +482,7 @@ Para nuestro segundo archivo:
 - *imprimir_devoluciones_bodega():* Este método permitirá imprimir los datos de las devoluciones recientes a la bodega
 - *crear_archivo_devoluciones_bodega():* Una vez más, se utilizará el módulo JSOn para la creación de un archivo que almacene los datos de devolución a la bodega
 - *eliminar_historial_devoluciones():* Se elimina la información que tenía el diccionario de devoluciones.
-- *abrir_archivo_devoluciones_bodega():*Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las devoluciones de productos a bodega (en caso de que exista)
+- *abrir_archivo_devoluciones_bodega():* Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las devoluciones de productos a bodega (en caso de que exista)
 - *guardar_informacion_devoluciones_bodega():* Se utiliza para guardar en el archivo tipo json los cambios realizados a la información de las devoluciones a bodega.
 - *control():* Esta función nos permitirá llevar a cabo un control de todas las cantidades a lo largo del programa, estas se ingresarán de forma manual y deberán coincidir con la información del sistema para que sea un control exitoso, por el contrario, se deberá hacer una revisión detallada para saber en donde hay una falla en el sistema de gestión de inventario
 - *mostrar_instructivo:* Esta función imprime varios strings que explican el funcionamiento del programa.
