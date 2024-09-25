@@ -62,11 +62,11 @@ En la siguiente tabla se muestra el resultado de este paso.
 |8|WIDEPants|19-03|$400 USD|Negro|unica|Algodon|
 |9|XASSPants|19-04|$400 USD|Negro|unica|Algodon|
 |10|DadPants|19-05|$1200 USD|Negro|unica|Cuero|
-|11|SMGSHOES|18-01|$200 USD|Negro|38|Cuero|
-|12|HODSHOES|18-02|$500 USD|Negro|38|Cuero|
-|13|TRACKTORSHOES|18-03|$3200 USD|Negro|38|Cuero|
-|14|ADSHOES|18-04|$3200 USD|Negro|38|Cuero|
-|15|NOTSHOES|18-05|$13.000 USD|Negro|38|Cuero|
+|11|SMGSHOES|18-01|$200 USD|Negro|unica|Cuero|
+|12|HODSHOES|18-02|$500 USD|Negro|unica|Cuero|
+|13|TRACKTORSHOES|18-03|$3200 USD|Negro|unica|Cuero|
+|14|ADSHOES|18-04|$3200 USD|Negro|unica|Cuero|
+|15|NOTSHOES|18-05|$13.000 USD|Negro|unica|Cuero|
 |16|CandyNECKLACE|17-01|$200 USD|Blanco|unica|Plata|
 |17|BulletsNECKLACE|18-02|$100 USD|Gris|unica|Titanio|
 |18|NONECKLACE|18-03|$1000 USD|Plata|unica|Plata|
