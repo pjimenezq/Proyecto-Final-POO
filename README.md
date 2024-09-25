@@ -52,8 +52,8 @@ En la siguiente tabla se muestra el resultado de este paso.
 
 ||Producto|Ref.|Precio|Color|Talla|Material Principal|
 |---|-----------------|------|---------|---------|--------|------|
-|1|SKShirt|20-01|$200 USD|Negro|XS-S-M-L-XL-XL|Seda|
-|2|MKShirt|20-02|$900 USD|Blanco|XS-S-M-L-XL-XL|Seda|
+|1|Panashirt|20-01|$200 USD|Negro|XS-S-M-L-XL-XL|Seda|
+|2|Mhirt|20-02|$900 USD|Blanco|XS-S-M-L-XL-XL|Seda|
 |3|NKShirt|20-03|$1200 USD|Gris|XS-S-M-L-XL-XL|Seda|
 |4|RKShirt|20-04|$2200 USD|Beige|XS-S-M-L-XL-XL|Seda|
 |5|PkShirt|20-05|$400 USD|Negro|XS-S-M-L-XL-XL|Seda|
