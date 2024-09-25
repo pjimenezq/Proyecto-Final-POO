@@ -410,6 +410,54 @@ if __name__=="__main__":
     main()
 ```
 ## Solución y la explicación
+
+### **Estructura**
+Para la estructura de nuestro proyecto decidimos hacerlo en forma de paquete, en el cual se encuentra:
+1.  El respectivo archivo _init_.py para que la carpeta se pueda considerar un paquete.
+2. Nuestro archivo bodega.py, en el cual se definieron las distintas clases, sus métodos y sus atributos
+3. Y por último nuestro archivo main.py, mediante el cual se hace llamado a las funciones para ejecutar nuestro código.
+
+### **bodega.py**
+Para nuestro segundo archivo:
+1. Se importó el módulo **JSON** el cual se entenderá más adelante la razón de su uso, pero básicamente fue utilizado para la creación de un archivo que guardará nuestra información
+
+2. La primera clase, es la clase producto, la cual posee atributos tales como:
+- Referencia: Identificación del producto
+- Artículo: Nombre del producto (Ej: SKShirt, ADShoes, etc.)
+- Precio: Costo de venta al público
+- Color: Color/es disponible/s del producto
+- Talla: Tallas en las cuales se encuentran disponibles el producto
+- Material: Descripción del material en el cual se encuentra hecho el producto
+	
+	**También se definieron sus métodos:**
+- actualizar_información_producto(): En caso de presentarse alguna modificación del producto en algunos de sus atributos se podrá realizar el cambio manualmente desde este método
+- imprimir_información_producto(): Este método nos dará todos los detalles del producto en caso de requerirse (dará la información más actualizada)
+
+3. La segunda clase, es la clase bodega, la cual posee como atributos todos aquellos productos que se encuentran en bodega, en nuestro caso, las veinte (20) referencias que hay en nuestra marca. Adicionalmente, posee tres diccionarios, para almacenar las entradas, las salidas y las devoluciones que se generen de cada producto.
+	**Y sus métodos:**
+- *agregar_producto_a_bodega():* Este método permitirá agregar nuevos productos a medida que lleguen a la bodega, esto sí el producto es nuevo, si el producto ya existe en bodega, no será posible añadirlo debido a que ya había sido registrado
+- *retirar_producto_de_bodega():* Por otro lado, en caso de que un producto no haya sido exitoso, y se desee retirar del mercado, este método será el indicado, pero sí el producto no había sido previamente registrado en bodega se tomará como un producto inexistente por lo cual no habrá nada que retirar.
+- *imprimir_productos_bodega():* En este caso, se imprimirá toda la información correspondiente a cada uno de los productos en bodega, en caso de no tener registros, no será posible obtener información
+- *crear_archivo_productos_bodega():* Es aquí donde se le dará uso al módulo JSON, este método creará un archivo para almacenar la información de los productos en bodega
+- *imprimir_producto_específico_bodega():* Este método nos dará la información de un producto requerido en específico
+- *registrar_entrada_producto():* Cada vez que lleguen nuevas cantidades al stock de la bodega será posible añadirlas mediante este método, modificando los datos de entrada y los datos de stock, con la única diferencia que los datos de entrada será las cantidades nuevas ingresadas, y las cantidades de stock serán las previamente almacenadas más las nuevas entradas
+- *eliminar_registro_entrada():* En caso de haber cometido un error al registrar las entradas, con este método se podrán eliminar esas cantidades ingresadas, al igual que con el método anterior, modificará las cantidades de entrada y las cantidades en stock, pero suprimiendo valores
+- *imprimir_entradas_bodega():* Este método permitirá imprimir el historial de los registro de entrada de la bodega
+- *crear_archivo_entradas_bodega():* Nuevamente, este método implementará el módulo JSON, para crear un archivo que almacene los datos de entrada de la bodega
+- *registrar_salida_producto():* Cada vez que salgan cantidades del stock de la bodega se podrán registrar mediante este método, modificando los datos de salida y los datos de stock, con la diferencia que los datos de salida son la cantidad retirada de la bodega, y los datos de stock serán los datos actualizados de las cantidades aún existentes.
+- *eliminar_registro_salida():* En caso de haber cometido un error al registrar las salidas, con este método se podrán eliminar esas cantidades retiradas, al igual que con el método anterior, modificará las cantidades de entrada y las cantidades en stock
+- *imprimir_salidas_bodega():* Este método permitirá imprimir los datos de las salidas recientes de las cantidades en bodega
+- *crear_archivo_salidas_bodega():* Nuevamente el módulo JSON, para la creación de un archivo que almacene los datos de salida de las cantidades en bodega
+- *registrar_devolución_producto():* Cada vez que un cliente haga una devolución de producto se podrá registrar mediante este método, modificando los datos de devolución y los datos de stock, con la diferencia que los datos de devolución son la cantidad de artículos devueltos a la bodega, y los datos de stock serán los datos actualizados de las cantidades existentes
+- *eliminar_registro_devolución():* En caso de haber cometido un error al registrar la devolución, con este método se podrán eliminar esos datos registrados, al igual que con el método anterior, modificará las cantidades de devolución y las cantidades en stock
+- *imprimir_devoluciones_bodega():* Este método permitirá imprimir los datos de las devoluciones recientes a la bodega
+- *crear_archivo_devoluciones_bodega():* Una vez más, se utilizará el módulo JSOn para la creación de un archivo que almacene los datos de devolución a la bodega
+- *control():* Finalmente, esta función nos permitirá llevar a cabo un control de todas las cantidades a lo largo del programa, estas se ingresarán de forma manual y deberán coincidir con la información del sistema para que sea un control exitoso, por el contrario, se deberá hacer una revisión detallada para saber en donde hay una falla en el sistema de gestión de inventario
+
+### **main.py**
+Finalmente, en nuestro archivo principal, se importará el paquete que contiene el código con todas las funciones requeridas, posteriormente se definen todos los atributos de cada uno de los productos y finalmente se podrá ejecutar cada uno de los métodos dependiendo de la necesidad al momento de querer llevar a cabo el sistema de gestión del inventario para NOTCLOTHES.
+
+
 ## Cómo instalar y usar el desarrollo
 ## Requerimientos para crear un entorno virtual
 ## Conclusiones
