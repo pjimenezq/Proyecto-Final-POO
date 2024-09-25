@@ -472,8 +472,6 @@ Para nuestro segundo archivo:
 Finalmente, en nuestro archivo principal, se importará el paquete que contiene el código con todas las funciones requeridas, posteriormente se definen todos los atributos de cada uno de los productos y finalmente se podrá ejecutar cada uno de los métodos dependiendo de la necesidad al momento de querer llevar a cabo el sistema de gestión del inventario para NOTCLOTHES.
 
 
-## Cómo instalar y usar el desarrollo
-## Requerimientos para crear un entorno virtual
 ## Conclusiones
 
 En el desarrollo de este proyecto, hemos adquirido conocimientos fundamentales sobre la **gestión de inventarios** y su implementación práctica mediante el uso de la programación orientada a objetos. La investigación inicial nos permitió comprender la importancia de un sistema de gestión de inventarios, el cual es esencial para cualquier empresa que maneje productos físicos. Este conocimiento teórico fue la base para la creación de una aplicación que emula un sistema de gestión de inventarios, permitiéndonos aplicar conceptos de programación orientada a objetos, diseño de clases y manejo de datos.
