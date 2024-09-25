@@ -124,7 +124,7 @@ classDiagram
     Productos: + Color
     Productos: + Talla    
     Productos: + Material
-    Productos: + imprimir_datos_producto()
+    Productos: + imprimir_informacion_producto()
 ```
 
 ### Código
