@@ -444,13 +444,10 @@ Para nuestro segundo archivo:
 - Material: Descripción del material en el cual se encuentra hecho el producto
 	
 	**También se definieron sus métodos:**
-- actualizar_información_producto(): En caso de presentarse alguna modificación del producto en algunos de sus atributos se podrá realizar el cambio manualmente desde este método
-- imprimir_información_producto(): Este método nos dará todos los detalles del producto en caso de requerirse (dará la información más actualizada)
+- imprimir_información_producto(): Este método nos dará todos los detalles del producto en caso de requerirse
 
 3. La segunda clase, es la clase bodega, la cual posee como atributos todos aquellos productos que se encuentran en bodega, en nuestro caso, las veinte (20) referencias que hay en nuestra marca. Adicionalmente, posee tres diccionarios, para almacenar las entradas, las salidas y las devoluciones que se generen de cada producto.
 	**Y sus métodos:**
-- *agregar_producto_a_bodega():* Este método permitirá agregar nuevos productos a medida que lleguen a la bodega, esto sí el producto es nuevo, si el producto ya existe en bodega, no será posible añadirlo debido a que ya había sido registrado
-- *retirar_producto_de_bodega():* Por otro lado, en caso de que un producto no haya sido exitoso, y se desee retirar del mercado, este método será el indicado, pero sí el producto no había sido previamente registrado en bodega se tomará como un producto inexistente por lo cual no habrá nada que retirar.
 - *imprimir_productos_bodega():* En este caso, se imprimirá toda la información correspondiente a cada uno de los productos en bodega, en caso de no tener registros, no será posible obtener información
 - *crear_archivo_productos_bodega():* Es aquí donde se le dará uso al módulo JSON, este método creará un archivo para almacenar la información de los productos en bodega
 - *imprimir_producto_específico_bodega():* Este método nos dará la información de un producto requerido en específico
