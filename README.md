@@ -427,13 +427,15 @@ if __name__=="__main__":
 
 ### **Estructura**
 Para la estructura de nuestro proyecto decidimos hacerlo en forma de paquete, en el cual se encuentra:
-1.  El respectivo archivo _init_.py para que la carpeta se pueda considerar un paquete.
-2. Nuestro archivo bodega.py, en el cual se definieron las distintas clases, sus métodos y sus atributos
-3. Y por último nuestro archivo main.py, mediante el cual se hace llamado a las funciones para ejecutar nuestro código.
+1.  Archivo _init_.py para que la carpeta se pueda considerar un paquete.
+2.  Archivo bodega.py, en el cual se definieron las distintas clases, sus métodos y sus atributos
+3.  Archivo main.py, mediante el cual se hace llamado a las funciones para ejecutar el código.
 
 ### **bodega.py**
 Para nuestro segundo archivo:
-1. Se importó el módulo **JSON** el cual se entenderá más adelante la razón de su uso, pero básicamente fue utilizado para la creación de un archivo que guardará nuestra información
+1. Se importó el módulo **JSON** el cual se entenderá más adelante la razón de su uso, pero básicamente fue utilizado para la creación de un archivo que guardará nuestra información. Asimismo, se importó el módulo **os.path**.
+
+**atributos clase Producto**
 
 2. La primera clase, es la clase producto, la cual posee atributos tales como:
 - Referencia: Identificación del producto
@@ -443,28 +445,48 @@ Para nuestro segundo archivo:
 - Talla: Tallas en las cuales se encuentran disponibles el producto
 - Material: Descripción del material en el cual se encuentra hecho el producto
 	
-	**También se definieron sus métodos:**
-- imprimir_información_producto(): Este método nos dará todos los detalles del producto en caso de requerirse
+**método de la clase Producto:**
 
-3. La segunda clase, es la clase bodega, la cual posee como atributos todos aquellos productos que se encuentran en bodega, en nuestro caso, las veinte (20) referencias que hay en nuestra marca. Adicionalmente, posee tres diccionarios, para almacenar las entradas, las salidas y las devoluciones que se generen de cada producto.
-	**Y sus métodos:**
-- *imprimir_productos_bodega():* En este caso, se imprimirá toda la información correspondiente a cada uno de los productos en bodega, en caso de no tener registros, no será posible obtener información
+- imprimir_información_producto(): Este método nos dará todos los detalles del producto en caso de requerirse
+  
+**atributos clase Bodega**
+
+3. La segunda clase, es la clase bodega, la cual posee como atributos todos aquellos productos que se encuentran en bodega, en nuestro caso, las veinte (20) referencias que hay en nuestra marca. Adicionalmente, posee cuatro diccionarios, para almacenar los productos, las entradas, las salidas y las devoluciones que se generen de cada producto. Estos diccionarios se incializan usando un método que abre un archivo con la información anterior de cada uno, en caso de que exista esta información. Si no existe, el método crea un diccionario vacío. Además, se crea una lista llamada "productos_en_bodega" que guarda los atributos de la bodega (los productos).
+   
+**métodos de la clase bodega:**
+- *guardar_informacion():* Llama las funciones de guardar información de productos, entradas, salidas y devoluciones.
+- *imprimir_caracteristicas_productos_bodega()* Para cada Producto en la bodega, se llama su método imprimir_informacion_producto()
+- *imprimir_caracteristicas_producto_especifico()* Se imprime la lista de "productos_en_bodega", para que el usuario seleccione el producto que desea imprimir. Esto se lleva a cabo llamando método imprimir_informacion_producto()
+- *imprimir_productos_bodega():* En este caso, se imprimirá toda la información correspondiente a cada uno de los productos en bodega, en caso de no tener registros, no será posible obtener información.
 - *crear_archivo_productos_bodega():* Es aquí donde se le dará uso al módulo JSON, este método creará un archivo para almacenar la información de los productos en bodega
-- *imprimir_producto_específico_bodega():* Este método nos dará la información de un producto requerido en específico
+- *imprimir_producto_específico_bodega():* Este método nos dará la información de un producto requerido en específico.
+- *abrir_archivo_productos_bodega():* Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de los productos en bodega (en caso de que exista)
+- *eliminar_todos_los_registros_de_movimientos():* La función permite que se borre la información que el programa tenía guardada.
+- *guardar_informacon_productos_bodega()*: Se utiliza para guardar en el archivo tipo json los cambios realizados a la información de los productos en bodega.
 - *registrar_entrada_producto():* Cada vez que lleguen nuevas cantidades al stock de la bodega será posible añadirlas mediante este método, modificando los datos de entrada y los datos de stock, con la única diferencia que los datos de entrada será las cantidades nuevas ingresadas, y las cantidades de stock serán las previamente almacenadas más las nuevas entradas
-- *eliminar_registro_entrada():* En caso de haber cometido un error al registrar las entradas, con este método se podrán eliminar esas cantidades ingresadas, al igual que con el método anterior, modificará las cantidades de entrada y las cantidades en stock, pero suprimiendo valores
+- *eliminar_registro_entrada():* En caso de haber cometido un error al registrar las entradas, con este método se podrán eliminar esas cantidades ingresadas, al igual que con el método anterior, modificará las cantidades de entrada y las cantidades en stock, pero suprimiendo valores.
 - *imprimir_entradas_bodega():* Este método permitirá imprimir el historial de los registro de entrada de la bodega
 - *crear_archivo_entradas_bodega():* Nuevamente, este método implementará el módulo JSON, para crear un archivo que almacene los datos de entrada de la bodega
+- *eliminar_historial_entradas():* Se elimina la información que tenía el diccionario de entradas.
+- *abrir_archivo_entradas_bodega():*Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las entradas de productos a bodega (en caso de que exista)
+- *guardar_informacion_entradas_bodega():* Se utiliza para guardar en el archivo tipo json los cambios realizados a la información de las entradas a bodega.
 - *registrar_salida_producto():* Cada vez que salgan cantidades del stock de la bodega se podrán registrar mediante este método, modificando los datos de salida y los datos de stock, con la diferencia que los datos de salida son la cantidad retirada de la bodega, y los datos de stock serán los datos actualizados de las cantidades aún existentes.
 - *eliminar_registro_salida():* En caso de haber cometido un error al registrar las salidas, con este método se podrán eliminar esas cantidades retiradas, al igual que con el método anterior, modificará las cantidades de entrada y las cantidades en stock
 - *imprimir_salidas_bodega():* Este método permitirá imprimir los datos de las salidas recientes de las cantidades en bodega
 - *crear_archivo_salidas_bodega():* Nuevamente el módulo JSON, para la creación de un archivo que almacene los datos de salida de las cantidades en bodega
+- *eliminar_historial_salidas():* Se elimina la información que tenía el diccionario de salidas.
+- *abrir_archivo_salidas_bodega():*Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las salidas de productos (en caso de que exista)
+- *guardar_informacion_salidas_bodega():* Se utiliza para guardar en el archivo tipo json los cambios realizados a la información de las salidas a bodega.
 - *registrar_devolución_producto():* Cada vez que un cliente haga una devolución de producto se podrá registrar mediante este método, modificando los datos de devolución y los datos de stock, con la diferencia que los datos de devolución son la cantidad de artículos devueltos a la bodega, y los datos de stock serán los datos actualizados de las cantidades existentes
 - *eliminar_registro_devolución():* En caso de haber cometido un error al registrar la devolución, con este método se podrán eliminar esos datos registrados, al igual que con el método anterior, modificará las cantidades de devolución y las cantidades en stock
 - *imprimir_devoluciones_bodega():* Este método permitirá imprimir los datos de las devoluciones recientes a la bodega
 - *crear_archivo_devoluciones_bodega():* Una vez más, se utilizará el módulo JSOn para la creación de un archivo que almacene los datos de devolución a la bodega
-- *control():* Finalmente, esta función nos permitirá llevar a cabo un control de todas las cantidades a lo largo del programa, estas se ingresarán de forma manual y deberán coincidir con la información del sistema para que sea un control exitoso, por el contrario, se deberá hacer una revisión detallada para saber en donde hay una falla en el sistema de gestión de inventario
-
+- *eliminar_historial_devoluciones():* Se elimina la información que tenía el diccionario de devoluciones.
+- *abrir_archivo_devoluciones_bodega():*Este método se utiliza para manejar la persistencia de datos, dado a que se llama cuando se inicializa el programa para obtener la información anterior de las devoluciones de productos a bodega (en caso de que exista)
+- *guardar_informacion_devoluciones_bodega():* Se utiliza para guardar en el archivo tipo json los cambios realizados a la información de las devoluciones a bodega.
+- *control():* Esta función nos permitirá llevar a cabo un control de todas las cantidades a lo largo del programa, estas se ingresarán de forma manual y deberán coincidir con la información del sistema para que sea un control exitoso, por el contrario, se deberá hacer una revisión detallada para saber en donde hay una falla en el sistema de gestión de inventario
+- *mostrar_instructivo:* Esta función imprime varios strings que explican el funcionamiento del programa.
+- *menu():* Este último método, es el que tiene la estructura del programa, llama a los métodos de bodega cuando el usuario lo requiere y permite que el usuario maneje el programa por medio de la consola.
 ### **main.py**
 Finalmente, en nuestro archivo principal, se importará el paquete que contiene el código con todas las funciones requeridas, posteriormente se definen todos los atributos de cada uno de los productos y finalmente se podrá ejecutar cada uno de los métodos dependiendo de la necesidad al momento de querer llevar a cabo el sistema de gestión del inventario para NOTCLOTHES.
 
@@ -473,9 +495,7 @@ Finalmente, en nuestro archivo principal, se importará el paquete que contiene 
 
 En el desarrollo de este proyecto, hemos adquirido conocimientos fundamentales sobre la **gestión de inventarios** y su implementación práctica mediante el uso de la programación orientada a objetos. La investigación inicial nos permitió comprender la importancia de un sistema de gestión de inventarios, el cual es esencial para cualquier empresa que maneje productos físicos. Este conocimiento teórico fue la base para la creación de una aplicación que emula un sistema de gestión de inventarios, permitiéndonos aplicar conceptos de programación orientada a objetos, diseño de clases y manejo de datos.
 
-La elaboración de este proyecto ha sido crucial desde el campo de la **ingeniería industrial**. La gestión eficiente de inventarios es un pilar en la optimización de recursos y la reducción de costos operativos. Al desarrollar una bodega en Python, hemos podido simular y analizar diferentes escenarios de entrada, salida y devolución de productos, lo que nos ha permitido entender mejor los flujos de materiales y la importancia de mantener un control riguroso sobre el inventario. Este ejercicio práctico nos ha brindado una visión más amplia, profunda y sobbretodo contextual de cómo los sistemas de información y tecnológicos son esenciales y pueden integrarse en los procesos industriales para mejorar la toma de decisiones y la eficiencia operativa.
-
-Además, la implementación de este sistema nos ha permitido explorar y aplicar **métodos cuantitativos** para equilibrar costos y niveles de servicio, así como formular políticas y controles que determinan las cantidades adecuadas de inventario, el tamaño de los pedidos y la frecuencia de compra. Estos aspectos son fundamentales en la **Ingeniería Industrial**, ya que contribuyen a la **reducción de riesgos** como la obsolescencia, el deterioro y los costos de almacenamiento.
+La elaboración de este proyecto ha sido crucial desde el campo de la **ingeniería industrial**. La gestión eficiente de inventarios es un pilar en la optimización de recursos y la reducción de costos operativos. Al desarrollar una bodega en Python, hemos podido simular y analizar diferentes escenarios de entrada, salida y devolución de productos, lo que nos ha permitido entender mejor los flujos de materiales y la importancia de mantener un control riguroso sobre el inventario. Este ejercicio práctico nos ha brindado una visión más amplia, profunda y sobretodo contextual de cómo los sistemas de información y tecnológicos son esenciales y pueden integrarse en los procesos industriales para mejorar la toma de decisiones y la eficiencia operativa.
 
 En terminos generales, la creación de una bodega en Python no solo ha fortalecido nuestras habilidades técnicas en programación y diseño de sistemas, sino que también ha enriquecido nuestro entendimiento de los principios de la Ingeniería Industrial. Este proyecto nos ha demostrado cómo la programacion orientada a objetos es una herramienta poderosa para optimizar procesos y mejorar la gestión de recursos en un entorno empresarial.
 
