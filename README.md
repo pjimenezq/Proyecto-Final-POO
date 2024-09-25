@@ -80,36 +80,50 @@ Habiendo entendido la forma en la que funciona un sistema de gestión de inventa
 
 **Relación bodega-productos**
 ```mermaid
+
 classDiagram
     class Bodega
-
-    Bodega: + agregar_producto_a_bodega()
-    Bodega: + retirar_producto_de_bodega()
+    Bodega: + guardar_informacion()
+    Bodega: + imprimir_caracteristicas_productos_bodega()
+    Bodega: + imprimir_caracteristicas_producto_especifico()
     Bodega: + imprimir_productos_bodega()
-    Bodega: + crear_archivo_productos_bodega()
     Bodega: + imprimir_producto_especifico_bodega()
+    Bodega: + crear_archivo_productos_bodega()
+    Bodega: + abrir_archivo_productos_bodega()
+    Bodega: + eliminar_todos_los_registros_de_movimientos()
+    Bodega: + guardar_informacion_productos_bodega()
     Bodega: + registrar_entrada_producto()
     Bodega: + eliminar_registro_entrada()
     Bodega: + imprimir_entradas_bodega()
     Bodega: + crear_archivo_entradas_bodega()
+    Bodega: + eliminar_historial_entradas()
+    Bodega: + abrir_archivo_entradas_bodega()
+    Bodega: + guardar_informacion_entradas_bodega()
     Bodega: + registrar_salida_producto()
     Bodega: + eliminar_registro_salida()
     Bodega: + imprimir_salidas_bodega()
     Bodega: + crear_archivo_salidas_bodega()
+    Bodega: + eliminar_historial_salidas()
+    Bodega: + abrir_archivo_salidas_bodega()
+    Bodega: + guardar_informacion_salidas_bodega()
     Bodega: + registrar_devolucion_producto()
     Bodega: + eliminar_registro_devolucion()
-    Bodega: + imprimir_devolucion_bodega()
+    Bodega: + imprimir_devoluciones_bodega()
     Bodega: + crear_archivo_devoluciones_bodega()
+    Bodega: + eliminar_historial_devoluciones()
+    Bodega: + abrir_archivo_devoluciones_bodega()
+    Bodega: + guardar_informacion_devoluciones_bodega()
     Bodega: + control()
+    Bodega: + mostrar_instructivo()
+    Bodega: +menu()
 
     Productos*--Bodega
     Productos: + Referencia
-    Productos: + Nombre
+    Productos: + Articulo
     Productos: + Precio
     Productos: + Color
     Productos: + Talla    
     Productos: + Material
-    Productos: + actualizar_datos_producto()
     Productos: + imprimir_datos_producto()
 ```
 
