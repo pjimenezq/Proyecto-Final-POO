@@ -1,9 +1,7 @@
 import mi_paquete.bodega as bodega
 
-
 def main():
     try:
-        
         PanaSHIRT=bodega.Producto("20-01", "PanaSHIRT", 200, "negro","xs", "algodón")
         MilkSHIRT= bodega.Producto("20-02", "MilkSHIRT", 900, "negro","s", "algodón")
         SkySHIRT= bodega.Producto("20-03", "SkySHIRT", 1200, "negro","m", "algodón")
@@ -30,7 +28,6 @@ def main():
             CandyNECKLACE, BulletsNECKLACE, NoNECKLACE, MercuryNECKLACE, SilverNECKLACE)
 
         inventario_bodega.menu()
-
     except ValueError:
         print("Error: se introdujo un dato que no es valido. Se reiniciará el sistema")
         inventario_bodega.menu()
