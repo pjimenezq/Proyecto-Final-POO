@@ -73,7 +73,7 @@ En la siguiente tabla se muestra el resultado de este paso.
 |19|MERCURYNECKLACE|18-04|$3200 USD|Negro|UNICA|Poliéster|Mercurio|
 |20|SilverNecklace|18-05|$1200 USD|Plata|UNICA|Poliéster|Plata|
 
-NOTCLOTHES maneja cinco líneas de productos con cinco tipos de referencias diferentes entre sí. 
+NOTCLOTHES maneja cuatro líneas de productos con cinco tipos de referencias diferentes entre sí. 
 
 ### Diagramas de clase
 Habiendo entendido la forma en la que funciona un sistema de gestión de inventario y habiendo definido el uso específico que se le va a dar a este en el proyecto, el cuarto paso consistió en modelar, mediante diagramas de clase, las clases, los objetos y sus relaciones.
