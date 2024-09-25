@@ -52,26 +52,26 @@ En la siguiente tabla se muestra el resultado de este paso.
 
 ||Producto|Ref.|Precio|Color|Talla|Material Principal|
 |---|-----------------|------|---------|---------|--------|------|
-|1|PanaShirt|20-01|$200 USD|Negro|XS-S-M-L-XL-XL|Seda|
-|2|MilkShirt|20-02|$900 USD|Blanco|XS-S-M-L-XL-XL|Seda|
-|3|SkyShirt|20-03|$1200 USD|Gris|XS-S-M-L-XL-XL|Seda|
-|4|DirtyShirt|20-04|$2200 USD|Beige|XS-S-M-L-XL-XL|Seda|
-|5|NoShirt|20-05|$400 USD|Transparente|XS-S-M-L-XL-XL|Plástico|
-|6|CargoPants|19-01|$100 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|7|NCPants|19-02|$900 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|8|WIDEPants|19-03|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|9|XASSPants|19-04|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
-|10|DadPants|19-05|$1200 USD|Negro|XS-S-M-L-XL-XL|Cuero|
-|11|SMGSHOES|18-01|$200 USD|Negro|38-39-40-41|Cuero|
-|12|HODSHOES|18-02|$500 USD|Negro|38-39-40-41|Cuero|
-|13|TRACKTORSHOES|18-03|$3200 USD|Negro|38-39-40-41|Cuero|
-|14|ADSHOES|18-04|$3200 USD|Negro|38-39-40-41|Cuero|
-|15|NOTSHOES|18-05|$13.000 USD|Negro|UNICA|Cuero|
-|16|CandyNECKLACE|17-01|$200 USD|Blanco|UNICA|Plata|
-|17|BulletsNECKLACE|18-02|$100 USD|Gris|UNICA|Titanio|
-|18|NONECKLACE|18-03|$1000 USD|Plata|UNICA|Plata|
-|19|MERCURYNECKLACE|18-04|$3200 USD|Negro|UNICA|Mercurio|
-|20|SilverNecklace|18-05|$1200 USD|Plata|UNICA|Plata|
+|1|PanaShirt|20-01|$200 USD|Negro|unica|Seda|
+|2|MilkShirt|20-02|$900 USD|Blanco|unica|Seda|
+|3|SkyShirt|20-03|$1200 USD|Gris|unica|Seda|
+|4|DirtyShirt|20-04|$2200 USD|Beige|unica|Seda|
+|5|NoShirt|20-05|$400 USD|Transparente|unica|Plástico|
+|6|CargoPants|19-01|$100 USD|Negro|unica|Algodon|
+|7|NCPants|19-02|$900 USD|Negro|unica|Algodon|
+|8|WIDEPants|19-03|$400 USD|Negro|unica|Algodon|
+|9|XASSPants|19-04|$400 USD|Negro|unica|Algodon|
+|10|DadPants|19-05|$1200 USD|Negro|unica|Cuero|
+|11|SMGSHOES|18-01|$200 USD|Negro|38|Cuero|
+|12|HODSHOES|18-02|$500 USD|Negro|38|Cuero|
+|13|TRACKTORSHOES|18-03|$3200 USD|Negro|38|Cuero|
+|14|ADSHOES|18-04|$3200 USD|Negro|38|Cuero|
+|15|NOTSHOES|18-05|$13.000 USD|Negro|38|Cuero|
+|16|CandyNECKLACE|17-01|$200 USD|Blanco|unica|Plata|
+|17|BulletsNECKLACE|18-02|$100 USD|Gris|unica|Titanio|
+|18|NONECKLACE|18-03|$1000 USD|Plata|unica|Plata|
+|19|MERCURYNECKLACE|18-04|$3200 USD|Negro|unica|Mercurio|
+|20|SilverNecklace|18-05|$1200 USD|Plata|unica|Plata|
 
 NOTCLOTHES maneja cuatro líneas de productos con cinco tipos de referencias diferentes entre sí. 
 
