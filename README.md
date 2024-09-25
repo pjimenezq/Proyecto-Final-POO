@@ -55,8 +55,8 @@ En la siguiente tabla se muestra el resultado de este paso.
 |1|PanaShirt|20-01|$200 USD|Negro|XS-S-M-L-XL-XL|Seda|
 |2|MilkShirt|20-02|$900 USD|Blanco|XS-S-M-L-XL-XL|Seda|
 |3|SkyShirt|20-03|$1200 USD|Gris|XS-S-M-L-XL-XL|Seda|
-|4|hirt|20-04|$2200 USD|Beige|XS-S-M-L-XL-XL|Seda|
-|5|NoShirt|20-05|$400 USD||XS-S-M-L-XL-XL|Plástico |
+|4|DirtyShirt|20-04|$2200 USD|Beige|XS-S-M-L-XL-XL|Seda|
+|5|NoShirt|20-05|$400 USD|Transparente|XS-S-M-L-XL-XL|Plástico|
 |6|CargoPants|19-01|$100 USD|Negro|XS-S-M-L-XL-XL|Algodon|
 |7|NCPants|19-02|$900 USD|Negro|XS-S-M-L-XL-XL|Algodon|
 |8|WIDEPants|19-03|$400 USD|Negro|XS-S-M-L-XL-XL|Algodon|
@@ -67,10 +67,10 @@ En la siguiente tabla se muestra el resultado de este paso.
 |13|TRACKTORSHOES|18-03|$3200 USD|Negro|38-39-40-41|Cuero|
 |14|ADSHOES|18-04|$3200 USD|Negro|38-39-40-41|Cuero|
 |15|NOTSHOES|18-05|$13.000 USD|Negro|UNICA|Cuero|
-|16|CandyNECKLACE|17-01|$200 USD|Blanco|UNICA|Poliéster|Plata|
-|17|BulletsNECKLACE|18-02|$100 USD|Gris|UNICA|Poliéster|Titanio|
-|18|NONECK-LACE|18-03|$1000 USD|Plata|UNICA|Poliéster|Plata|
-|19|MERCURYNECKLACE|18-04|$3200 USD|Negro|UNICA|Poliéster|Mercurio|
+|16|CandyNECKLACE|17-01|$200 USD|Blanco|UNICA|Plata|
+|17|BulletsNECKLACE|18-02|$100 USD|Gris|UNICA|Titanio|
+|18|NONECKLACE|18-03|$1000 USD|Plata|UNICA|Plata|
+|19|MERCURYNECKLACE|18-04|$3200 USD|Negro|UNICA|Mercurio|
 |20|SilverNecklace|18-05|$1200 USD|Plata|UNICA|Plata|
 
 NOTCLOTHES maneja cuatro líneas de productos con cinco tipos de referencias diferentes entre sí. 
